@@ -1,0 +1,73 @@
+mkdir ~/.pip
+
+cat <<EOF > ~/.pip/pip.conf
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+trusted-host = pypi.tuna.tsinghua.edu.cn
+EOF
+
+# update /etc/pki/tls/certs/ca-bundle.crt
+yum update -y openssl
+
+yum install -y epel-release
+
+yum install -y python-setuptools python-pip python-devel libffi-devel openssl-devel gcc
+/usr/local/python-3.6.2/bin/pip3 install --upgrade pip
+/usr/local/python-3.6.2/bin/pip3 install --upgrade ordereddict backport-ipaddress setuptools  urllib3
+/usr/local/python-3.6.2/bin/pip3 install pyopenssl ndg-httpsclient pyasn
+/usr/local/python-3.6.2/bin/pip3 install shadowsocks
+
+
+cat << EOF >/etc/shadowsocks.json
+{
+    "server":"0.0.0.0",
+    "server_port":58080,
+    "password":"leiXee6ushaes5natahm",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open":false,
+    "workers":3
+}
+EOF
+
+
+# 启动服务端
+/usr/bin/ssserver -c /etc/shadowsocks.json -d start
+
+
+# 配置客户端
+mkdir /etc/shadowsocks
+cat << EOF >/etc/shadowsocks/jp.json
+{
+    "server":"202.182.113.95",
+    "server_port":2500,
+    "local_address":"0.0.0.0",
+    "local_port":1080,
+    "password":"cPnmaNPJcFMXI2FvS2nn",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open":false,
+    "workers":3
+}
+EOF
+
+
+# 启动客户端
+/usr/local/bin/sslocal -c /etc/shadowsocks/jp.json -d start
+
+vim /usr/lib/systemd/user/shadowsocks@.service
+
+[Unit]
+Description=Shadowsocks Client Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+ExecStart=/usr/bin/sslocal -c /etc/shadowsocks/%i.json
+
+[Install]
+WantedBy=multi-user.target
+
+
+
