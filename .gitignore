@@ -57,4 +57,4 @@ Gemfile.lock
 *.pdf
 images/
 *_build.sh
-
+test/
