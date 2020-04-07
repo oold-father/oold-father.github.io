@@ -58,3 +58,4 @@ Gemfile.lock
 images/
 *_build.sh
 test/
+test*
