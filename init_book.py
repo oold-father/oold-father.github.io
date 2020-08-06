@@ -1,7 +1,9 @@
 from pathlib import Path
 
-book_dir = Path(__file__).absolute() / 'book'
+book_dir = str(Path(__file__).parent.absolute()) + '/book'
 book_path = Path(book_dir)
+
+print('book path: %s' % book_dir)
 
 for i in book_path.glob('**/*'):
     if i.is_file():
@@ -18,5 +20,7 @@ for i in book_path.glob('**/*'):
         if file.suffix == '.asc':
             l_s += 'include::%s/%s[]\n' % (dir_name, file.name)
 
-    with open(book_dir + '%s.asc' % dir_name, 'w', encoding='utf8') as f:
+    filename = book_dir + '/%s.asc' % dir_name
+    print('写入 %s' % filename)
+    with open(filename, 'w', encoding='utf8') as f:
         f.write(l_s)
