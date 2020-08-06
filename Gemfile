@@ -2,6 +2,10 @@ source 'https://gems.ruby-china.com'
 
 gem 'rake'
 gem 'asciidoctor'
-gem 'asciidoctor-pdf', '1.5.0.beta.1'
+gem 'asciidoctor-pdf'
+gem 'asciidoctor-pdf-cjk'
 gem 'asciidoctor-pdf-cjk-kai_gen_gothic'
-
+gem 'ttfunk'
+gem 'prawn-icon'
+gem 'asciidoctor-diagram'
+gem 'pygments.rb'
