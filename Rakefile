@@ -14,8 +14,8 @@ namespace :book do
   desc 'build basic html book'
   task :build_html => :prebuild do
     puts "Converting to HTML..."
-    `bundle exec asciidoctor -r asciidoctor-diagram yinxin的笔记.asc -o yinxin的笔记.html`
-    puts " -- HTML output at yinxin的笔记.html"
+    `bundle exec asciidoctor -r asciidoctor-diagram yinxin的笔记.asc -o notebook.html`
+    puts " -- HTML output at notebook.html"
   end
 
   desc 'build basic pdf book'

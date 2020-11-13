@@ -1,0 +1,3153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="author" content="尹新&lt;yinxin666ccyy@gmail.com&gt;">
+<title>yinxin的笔记</title>
+<style>
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/** Address `[hidden]` styling not present in IE 8/9. Hide the `template` element in IE, Safari, and Firefox < 22. */
+[hidden], template { display: none; }
+
+script { display: none !important; }
+
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+
+/** Remove default margin. */
+body { margin: 0; }
+
+/* ========================================================================== Links ========================================================================== */
+/** Remove the gray background color from active links in IE 10. */
+a { background: transparent; }
+
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover { outline: 0; }
+
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] { border-bottom: 1px dotted; }
+
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong { font-weight: bold; }
+
+/** Address styling not present in Safari 5 and Chrome. */
+dfn { font-style: italic; }
+
+/** Address differences between Firefox and other browsers. */
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+/** Address styling not present in IE 8/9. */
+mark { background: #ff0; color: #000; }
+
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+
+/** Improve readability of pre-formatted text in all browsers. */
+pre { white-space: pre-wrap; }
+
+/** Set consistent quote types. */
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/** Address inconsistent and variable font size in all browsers. */
+small { font-size: 80%; }
+
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img { border: 0; }
+
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) { overflow: hidden; }
+
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure { margin: 0; }
+
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
+
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input { line-height: normal; }
+
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select { text-transform: none; }
+
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] { cursor: default; }
+
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table { border-collapse: collapse; border-spacing: 0; }
+
+meta.foundation-mq-small { font-family: "only screen and (min-width: 768px)"; width: 768px; }
+
+meta.foundation-mq-medium { font-family: "only screen and (min-width:1280px)"; width: 1280px; }
+
+meta.foundation-mq-large { font-family: "only screen and (min-width:1440px)"; width: 1440px; }
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body { font-size: 100%; }
+
+body { background: white; color: rgba(0, 0, 0, 0.8); padding: 0; margin: 0; font-family: "Noto Serif", "DejaVu Serif", serif; font-weight: normal; font-style: normal; line-height: 1; position: relative; cursor: auto; }
+
+a:hover { cursor: pointer; }
+
+img, object, embed { max-width: 100%; height: auto; }
+
+object, embed { height: 100%; }
+
+img { -ms-interpolation-mode: bicubic; }
+
+#map_canvas img, #map_canvas embed, #map_canvas object, .map_canvas img, .map_canvas embed, .map_canvas object { max-width: none !important; }
+
+.left { float: left !important; }
+
+.right { float: right !important; }
+
+.text-left { text-align: left !important; }
+
+.text-right { text-align: right !important; }
+
+.text-center { text-align: center !important; }
+
+.text-justify { text-align: justify !important; }
+
+.hide { display: none; }
+
+.antialiased, body { -webkit-font-smoothing: antialiased; }
+
+img { display: inline-block; vertical-align: middle; }
+
+textarea { height: auto; min-height: 50px; }
+
+select { width: 100%; }
+
+object, svg { display: inline-block; vertical-align: middle; }
+
+.center { margin-left: auto; margin-right: auto; }
+
+.spread { width: 100%; }
+
+p.lead, .paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p { font-size: 1.21875em; line-height: 1.6; }
+
+.subheader, .admonitionblock td.content > .title, .audioblock > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .stemblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, table.tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { line-height: 1.45; color: #7a2518; font-weight: normal; margin-top: 0; margin-bottom: 0.25em; }
+
+/* Typography resets */
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6, pre, form, p, blockquote, th, td { margin: 0; padding: 0; direction: ltr; }
+
+/* Default Link Styles */
+a { color: #2156a5; text-decoration: underline; line-height: inherit; }
+a:hover, a:focus { color: #1d4b8f; }
+a img { border: none; }
+
+/* Default paragraph styles */
+p { font-family: inherit; font-weight: normal; font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; text-rendering: optimizeLegibility; }
+p aside { font-size: 0.875em; line-height: 1.35; font-style: italic; }
+
+/* Default header styles */
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { font-family: "Open Sans", "DejaVu Sans", sans-serif; font-weight: 300; font-style: normal; color: #ba3925; text-rendering: optimizeLegibility; margin-top: 1em; margin-bottom: 0.5em; line-height: 1.0125em; }
+h1 small, h2 small, h3 small, #toctitle small, .sidebarblock > .content > .title small, h4 small, h5 small, h6 small { font-size: 60%; color: #e99b8f; line-height: 0; }
+
+h1 { font-size: 2.125em; }
+
+h2 { font-size: 1.6875em; }
+
+h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.375em; }
+
+h4 { font-size: 1.125em; }
+
+h5 { font-size: 1.125em; }
+
+h6 { font-size: 1em; }
+
+hr { border: solid #ddddd8; border-width: 1px 0 0; clear: both; margin: 1.25em 0 1.1875em; height: 0; }
+
+/* Helpful Typography Defaults */
+em, i { font-style: italic; line-height: inherit; }
+
+strong, b { font-weight: bold; line-height: inherit; }
+
+small { font-size: 60%; line-height: inherit; }
+
+code { font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace; font-weight: normal; color: rgba(0, 0, 0, 0.9); }
+
+/* Lists */
+ul, ol, dl { font-size: 1em; line-height: 1.6; margin-bottom: 1.25em; list-style-position: outside; font-family: inherit; }
+
+ul, ol { margin-left: 1.5em; }
+ul.no-bullet, ol.no-bullet { margin-left: 1.5em; }
+
+/* Unordered Lists */
+ul li ul, ul li ol { margin-left: 1.25em; margin-bottom: 0; font-size: 1em; /* Override nested font-size change */ }
+ul.square li ul, ul.circle li ul, ul.disc li ul { list-style: inherit; }
+ul.square { list-style-type: square; }
+ul.circle { list-style-type: circle; }
+ul.disc { list-style-type: disc; }
+ul.no-bullet { list-style: none; }
+
+/* Ordered Lists */
+ol li ul, ol li ol { margin-left: 1.25em; margin-bottom: 0; }
+
+/* Definition Lists */
+dl dt { margin-bottom: 0.3125em; font-weight: bold; }
+dl dd { margin-bottom: 1.25em; }
+
+/* Abbreviations */
+abbr, acronym { text-transform: uppercase; font-size: 90%; color: rgba(0, 0, 0, 0.8); border-bottom: 1px dotted #dddddd; cursor: help; }
+
+abbr { text-transform: none; }
+
+/* Blockquotes */
+blockquote { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
+blockquote cite { display: block; font-size: 0.9375em; color: rgba(0, 0, 0, 0.6); }
+blockquote cite:before { content: "\2014 \0020"; }
+blockquote cite a, blockquote cite a:visited { color: rgba(0, 0, 0, 0.6); }
+
+blockquote, blockquote p { line-height: 1.6; color: rgba(0, 0, 0, 0.85); }
+
+/* Microformats */
+.vcard { display: inline-block; margin: 0 0 1.25em 0; border: 1px solid #dddddd; padding: 0.625em 0.75em; }
+.vcard li { margin: 0; display: block; }
+.vcard .fn { font-weight: bold; font-size: 0.9375em; }
+
+.vevent .summary { font-weight: bold; }
+.vevent abbr { cursor: auto; text-decoration: none; font-weight: bold; border: none; padding: 0 0.0625em; }
+
+@media only screen and (min-width: 768px) { h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { line-height: 1.2; }
+  h1 { font-size: 2.75em; }
+  h2 { font-size: 2.3125em; }
+  h3, #toctitle, .sidebarblock > .content > .title { font-size: 1.6875em; }
+  h4 { font-size: 1.4375em; } }
+/* Tables */
+table { background: white; margin-bottom: 1.25em; border: solid 1px #dedede; }
+table thead, table tfoot { background: #f7f8f7; font-weight: bold; }
+table thead tr th, table thead tr td, table tfoot tr th, table tfoot tr td { padding: 0.5em 0.625em 0.625em; font-size: inherit; color: rgba(0, 0, 0, 0.8); text-align: left; }
+table tr th, table tr td { padding: 0.5625em 0.625em; font-size: inherit; color: rgba(0, 0, 0, 0.8); }
+table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #f8f8f7; }
+table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.6; }
+
+body { tab-size: 4; }
+
+h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 { line-height: 1.2; word-spacing: -0.05em; }
+h1 strong, h2 strong, h3 strong, #toctitle strong, .sidebarblock > .content > .title strong, h4 strong, h5 strong, h6 strong { font-weight: 400; }
+
+.clearfix:before, .clearfix:after, .float-group:before, .float-group:after { content: " "; display: table; }
+.clearfix:after, .float-group:after { clear: both; }
+
+*:not(pre) > code { font-size: 0.9375em; font-style: normal !important; letter-spacing: 0; padding: 0.1em 0.5ex; word-spacing: -0.15em; background-color: #f7f7f8; -webkit-border-radius: 4px; border-radius: 4px; line-height: 1.45; text-rendering: optimizeSpeed; border: 1px dashed #2f6fab;}
+
+pre {border: 1px dashed gray;}
+
+pre, pre > code { line-height: 1.45; color: rgba(0, 0, 0, 0.9); font-family: "Droid Sans Mono", "DejaVu Sans Mono", "Monospace", monospace; font-weight: normal; text-rendering: optimizeSpeed;}
+
+.keyseq { color: rgba(51, 51, 51, 0.8); }
+
+kbd { font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace; display: inline-block; color: rgba(0, 0, 0, 0.8); font-size: 0.65em; line-height: 1.45; background-color: #f7f7f7; border: 1px solid #ccc; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 0.1em white inset; box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 0.1em white inset; margin: 0 0.15em; padding: 0.2em 0.5em; vertical-align: middle; position: relative; top: -0.1em; white-space: nowrap; }
+
+.keyseq kbd:first-child { margin-left: 0; }
+
+.keyseq kbd:last-child { margin-right: 0; }
+
+.menuseq, .menu { color: rgba(0, 0, 0, 0.8); }
+
+b.button:before, b.button:after { position: relative; top: -1px; font-weight: normal; }
+
+b.button:before { content: "["; padding: 0 3px 0 2px; }
+
+b.button:after { content: "]"; padding: 0 2px 0 3px; }
+
+p a > code:hover { color: rgba(0, 0, 0, 0.9); }
+
+#header, #content, #footnotes, #footer { width: 100%; margin-left: auto; margin-right: auto; margin-top: 0; margin-bottom: 0; max-width: 62.5em; *zoom: 1; position: relative; padding-left: 0.9375em; padding-right: 0.9375em; }
+#header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after { content: " "; display: table; }
+#header:after, #content:after, #footnotes:after, #footer:after { clear: both; }
+
+#content { margin-top: 1.25em; }
+
+#content:before { content: none; }
+
+#header > h1:first-child { color: rgba(0, 0, 0, 0.85); margin-top: 2.25rem; margin-bottom: 0; }
+#header > h1:first-child + #toc { margin-top: 8px; border-top: 1px solid #ddddd8; }
+#header > h1:only-child, body.toc2 #header > h1:nth-last-child(2) { border-bottom: 1px solid #ddddd8; padding-bottom: 8px; }
+#header .details { border-bottom: 1px solid #ddddd8; line-height: 1.45; padding-top: 0.25em; padding-bottom: 0.25em; padding-left: 0.25em; color: rgba(0, 0, 0, 0.6); display: -ms-flexbox; display: -webkit-flex; display: flex; -ms-flex-flow: row wrap; -webkit-flex-flow: row wrap; flex-flow: row wrap; }
+#header .details span:first-child { margin-left: -0.125em; }
+#header .details span.email a { color: rgba(0, 0, 0, 0.85); }
+#header .details br { display: none; }
+#header .details br + span:before { content: "\00a0\2013\00a0"; }
+#header .details br + span.author:before { content: "\00a0\22c5\00a0"; color: rgba(0, 0, 0, 0.85); }
+#header .details br + span#revremark:before { content: "\00a0|\00a0"; }
+#header #revnumber { text-transform: capitalize; }
+#header #revnumber:after { content: "\00a0"; }
+
+#content > h1:first-child:not([class]) { color: rgba(0, 0, 0, 0.85); border-bottom: 1px solid #ddddd8; padding-bottom: 8px; margin-top: 0; padding-top: 1rem; margin-bottom: 1.25rem; }
+
+#toc { border-bottom: 1px solid #efefed; padding-bottom: 0.5em; }
+#toc > ul { margin-left: 0.125em; }
+#toc ul.sectlevel0 > li > a { font-style: italic; }
+#toc ul.sectlevel0 ul.sectlevel1 { margin: 0.5em 0; }
+#toc ul { font-family: "Open Sans", "DejaVu Sans", sans-serif; list-style-type: none; }
+#toc li { line-height: 1.3334; margin-top: 0.3334em; }
+#toc a { text-decoration: none; }
+#toc a:active { text-decoration: underline; }
+
+#toctitle { color: #7a2518; font-size: 1.2em; }
+
+@media only screen and (min-width: 768px) { #toctitle { font-size: 1.375em; }
+  body.toc2 { padding-left: 15em; padding-right: 0; }
+  #toc.toc2 { margin-top: 0 !important; background-color: #f8f8f7; position: fixed; width: 15em; left: 0; top: 0; border-right: 1px solid #efefed; border-top-width: 0 !important; border-bottom-width: 0 !important; z-index: 1000; padding: 1.25em 1em; height: 100%; overflow: auto; }
+  #toc.toc2 #toctitle { margin-top: 0; margin-bottom: 0.8rem; font-size: 1.2em; }
+  #toc.toc2 > ul { font-size: 0.9em; margin-bottom: 0; }
+  #toc.toc2 ul ul { margin-left: 0; padding-left: 1em; }
+  #toc.toc2 ul.sectlevel0 ul.sectlevel1 { padding-left: 0; margin-top: 0.5em; margin-bottom: 0.5em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 15em; }
+  body.toc2.toc-right #toc.toc2 { border-right-width: 0; border-left: 1px solid #efefed; left: auto; right: 0; } }
+@media only screen and (min-width: 1280px) { body.toc2 { padding-left: 20em; padding-right: 0; }
+  #toc.toc2 { width: 20em; }
+  #toc.toc2 #toctitle { font-size: 1.375em; }
+  #toc.toc2 > ul { font-size: 0.95em; }
+  #toc.toc2 ul ul { padding-left: 1.25em; }
+  body.toc2.toc-right { padding-left: 0; padding-right: 20em; } }
+#content #toc { border-style: solid; border-width: 1px; border-color: #e0e0dc; margin-bottom: 1.25em; padding: 1.25em; background: #f8f8f7; -webkit-border-radius: 4px; border-radius: 4px; }
+#content #toc > :first-child { margin-top: 0; }
+#content #toc > :last-child { margin-bottom: 0; }
+
+#footer { max-width: 100%; background-color: rgba(0, 0, 0, 0.8); padding: 1.25em; }
+
+#footer-text { color: rgba(255, 255, 255, 0.8); line-height: 1.44; }
+
+.sect1 { padding-bottom: 0.625em; }
+
+@media only screen and (min-width: 768px) { .sect1 { padding-bottom: 1.25em; } }
+.sect1 + .sect1 { border-top: 1px solid #efefed; }
+
+#content h1 > a.anchor, h2 > a.anchor, h3 > a.anchor, #toctitle > a.anchor, .sidebarblock > .content > .title > a.anchor, h4 > a.anchor, h5 > a.anchor, h6 > a.anchor { position: absolute; z-index: 1001; width: 1.5ex; margin-left: -1.5ex; display: block; text-decoration: none !important; visibility: hidden; text-align: center; font-weight: normal; }
+#content h1 > a.anchor:before, h2 > a.anchor:before, h3 > a.anchor:before, #toctitle > a.anchor:before, .sidebarblock > .content > .title > a.anchor:before, h4 > a.anchor:before, h5 > a.anchor:before, h6 > a.anchor:before { content: "\00A7"; font-size: 0.85em; display: block; padding-top: 0.1em; }
+#content h1:hover > a.anchor, #content h1 > a.anchor:hover, h2:hover > a.anchor, h2 > a.anchor:hover, h3:hover > a.anchor, #toctitle:hover > a.anchor, .sidebarblock > .content > .title:hover > a.anchor, h3 > a.anchor:hover, #toctitle > a.anchor:hover, .sidebarblock > .content > .title > a.anchor:hover, h4:hover > a.anchor, h4 > a.anchor:hover, h5:hover > a.anchor, h5 > a.anchor:hover, h6:hover > a.anchor, h6 > a.anchor:hover { visibility: visible; }
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link { color: #ba3925; text-decoration: none; }
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover { color: #a53221; }
+
+.audioblock, .imageblock, .literalblock, .listingblock, .stemblock, .videoblock { margin-bottom: 1.25em; }
+
+.admonitionblock td.content > .title, .audioblock > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .stemblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, table.tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title { text-rendering: optimizeLegibility; text-align: left; font-family: "Noto Serif", "DejaVu Serif", serif; font-size: 1rem; font-style: italic; }
+
+table.tableblock > caption.title { white-space: nowrap; overflow: visible; max-width: 0; }
+
+.paragraph.lead > p, #preamble > .sectionbody > .paragraph:first-of-type p { color: rgba(0, 0, 0, 0.85); }
+
+table.tableblock #preamble > .sectionbody > .paragraph:first-of-type p { font-size: inherit; }
+
+.admonitionblock > table { border-collapse: separate; border: 0; background: none; width: 100%; }
+.admonitionblock > table td.icon { text-align: center; width: 80px; }
+.admonitionblock > table td.icon img { max-width: none; }
+.admonitionblock > table td.icon .title { font-weight: bold; font-family: "Open Sans", "DejaVu Sans", sans-serif; text-transform: uppercase; }
+.admonitionblock > table td.content { padding-left: 1.125em; padding-right: 1.25em; border-left: 1px solid #ddddd8; color: rgba(0, 0, 0, 0.6); }
+.admonitionblock > table td.content > :last-child > :last-child { margin-bottom: 0; }
+
+.exampleblock > .content { border-style: solid; border-width: 1px; border-color: #e6e6e6; margin-bottom: 1.25em; padding: 1.25em; background: white; -webkit-border-radius: 4px; border-radius: 4px; }
+.exampleblock > .content > :first-child { margin-top: 0; }
+.exampleblock > .content > :last-child { margin-bottom: 0; }
+
+.sidebarblock { border-style: solid; border-width: 1px; border-color: #e0e0dc; margin-bottom: 1.25em; padding: 1.25em; background: #f8f8f7; -webkit-border-radius: 4px; border-radius: 4px; }
+.sidebarblock > :first-child { margin-top: 0; }
+.sidebarblock > :last-child { margin-bottom: 0; }
+.sidebarblock > .content > .title { color: #7a2518; margin-top: 0; text-align: center; }
+
+.exampleblock > .content > :last-child > :last-child, .exampleblock > .content .olist > ol > li:last-child > :last-child, .exampleblock > .content .ulist > ul > li:last-child > :last-child, .exampleblock > .content .qlist > ol > li:last-child > :last-child, .sidebarblock > .content > :last-child > :last-child, .sidebarblock > .content .olist > ol > li:last-child > :last-child, .sidebarblock > .content .ulist > ul > li:last-child > :last-child, .sidebarblock > .content .qlist > ol > li:last-child > :last-child { margin-bottom: 0; }
+
+.listingblock pre:not(.highlight) {color: white; background: #002b36; }
+
+.literalblock pre, .listingblock pre[class="highlight"], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint { background: #f7f7f8; }
+.sidebarblock .literalblock pre, .sidebarblock .listingblock pre:not(.highlight), .sidebarblock .listingblock pre[class="highlight"], .sidebarblock .listingblock pre[class^="highlight "], .sidebarblock .listingblock pre.CodeRay, .sidebarblock .listingblock pre.prettyprint { background: #f2f1f1; }
+
+.literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { -webkit-border-radius: 4px; border-radius: 4px; word-wrap: break-word; padding: 1em; font-size: 0.8125em; }
+.literalblock pre.nowrap, .literalblock pre[class].nowrap, .listingblock pre.nowrap, .listingblock pre[class].nowrap { overflow-x: auto; white-space: pre; word-wrap: normal; }
+@media only screen and (min-width: 768px) { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 0.90625em; } }
+@media only screen and (min-width: 1280px) { .literalblock pre, .literalblock pre[class], .listingblock pre, .listingblock pre[class] { font-size: 1em; } }
+
+.literalblock.output pre { color: #f7f7f8; background-color: rgba(0, 0, 0, 0.9); }
+
+.listingblock pre.highlightjs { padding: 0; }
+.listingblock pre.highlightjs > code { padding: 1em; -webkit-border-radius: 4px; border-radius: 4px; }
+
+.listingblock pre.prettyprint { border-width: 0; }
+
+.listingblock > .content { position: relative; }
+
+.listingblock code[data-lang]:before { display: none; content: attr(data-lang); position: absolute; font-size: 0.75em; top: 0.425rem; right: 0.5rem; line-height: 1; text-transform: uppercase; color: #999; }
+
+.listingblock:hover code[data-lang]:before { display: block; }
+
+.listingblock.terminal pre .command:before { content: attr(data-prompt); padding-right: 0.5em; color: #999; }
+
+.listingblock.terminal pre .command:not([data-prompt]):before { content: "$"; }
+
+table.pyhltable { border-collapse: separate; border: 0; margin-bottom: 0; background: none; }
+
+table.pyhltable td { vertical-align: top; padding-top: 0; padding-bottom: 0; line-height: 1.45; }
+
+table.pyhltable td.code { padding-left: .75em; padding-right: 0; }
+
+pre.pygments .lineno, table.pyhltable td:not(.code) { color: #999; padding-left: 0; padding-right: .5em; border-right: 1px solid #ddddd8; }
+
+pre.pygments .lineno { display: inline-block; margin-right: .25em; }
+
+table.pyhltable .linenodiv { background: none !important; padding-right: 0 !important; }
+
+.quoteblock { margin: 0 1em 1.25em 1.5em; display: table; }
+.quoteblock > .title { margin-left: -1.5em; margin-bottom: 0.75em; }
+.quoteblock blockquote, .quoteblock blockquote p { color: rgba(0, 0, 0, 0.85); font-size: 1.15rem; line-height: 1.75; word-spacing: 0.1em; letter-spacing: 0; font-style: italic; text-align: justify; }
+.quoteblock blockquote { margin: 0; padding: 0; border: 0; }
+.quoteblock blockquote:before { content: "\201c"; float: left; font-size: 2.75em; font-weight: bold; line-height: 0.6em; margin-left: -0.6em; color: #7a2518; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+.quoteblock blockquote > .paragraph:last-child p { margin-bottom: 0; }
+.quoteblock .attribution { margin-top: 0.5em; margin-right: 0.5ex; text-align: right; }
+.quoteblock .quoteblock { margin-left: 0; margin-right: 0; padding: 0.5em 0; border-left: 3px solid rgba(0, 0, 0, 0.6); }
+.quoteblock .quoteblock blockquote { padding: 0 0 0 0.75em; }
+.quoteblock .quoteblock blockquote:before { display: none; }
+
+.verseblock { margin: 0 1em 1.25em 1em; }
+.verseblock pre { font-family: "Open Sans", "DejaVu Sans", sans; font-size: 1.15rem; color: rgba(0, 0, 0, 0.85); font-weight: 300; text-rendering: optimizeLegibility; }
+.verseblock pre strong { font-weight: 400; }
+.verseblock .attribution { margin-top: 1.25rem; margin-left: 0.5ex; }
+
+.quoteblock .attribution, .verseblock .attribution { font-size: 0.9375em; line-height: 1.45; font-style: italic; }
+.quoteblock .attribution br, .verseblock .attribution br { display: none; }
+.quoteblock .attribution cite, .verseblock .attribution cite { display: block; letter-spacing: -0.025em; color: rgba(0, 0, 0, 0.6); }
+
+.quoteblock.abstract { margin: 0 0 1.25em 0; display: block; }
+.quoteblock.abstract blockquote, .quoteblock.abstract blockquote p { text-align: left; word-spacing: 0; }
+.quoteblock.abstract blockquote:before, .quoteblock.abstract blockquote p:first-of-type:before { display: none; }
+
+table.tableblock { max-width: 100%; border-collapse: separate; }
+table.tableblock td > .paragraph:last-child p > p:last-child, table.tableblock th > p:last-child, table.tableblock td > p:last-child { margin-bottom: 0; }
+
+table.tableblock, th.tableblock, td.tableblock { border: 0 solid #dedede; }
+
+table.grid-all th.tableblock, table.grid-all td.tableblock { border-width: 0 1px 1px 0; }
+
+table.grid-all tfoot > tr > th.tableblock, table.grid-all tfoot > tr > td.tableblock { border-width: 1px 1px 0 0; }
+
+table.grid-cols th.tableblock, table.grid-cols td.tableblock { border-width: 0 1px 0 0; }
+
+table.grid-all * > tr > .tableblock:last-child, table.grid-cols * > tr > .tableblock:last-child { border-right-width: 0; }
+
+table.grid-rows th.tableblock, table.grid-rows td.tableblock { border-width: 0 0 1px 0; }
+
+table.grid-all tbody > tr:last-child > th.tableblock, table.grid-all tbody > tr:last-child > td.tableblock, table.grid-all thead:last-child > tr > th.tableblock, table.grid-rows tbody > tr:last-child > th.tableblock, table.grid-rows tbody > tr:last-child > td.tableblock, table.grid-rows thead:last-child > tr > th.tableblock { border-bottom-width: 0; }
+
+table.grid-rows tfoot > tr > th.tableblock, table.grid-rows tfoot > tr > td.tableblock { border-width: 1px 0 0 0; }
+
+table.frame-all { border-width: 1px; }
+
+table.frame-sides { border-width: 0 1px; }
+
+table.frame-topbot { border-width: 1px 0; }
+
+th.halign-left, td.halign-left { text-align: left; }
+
+th.halign-right, td.halign-right { text-align: right; }
+
+th.halign-center, td.halign-center { text-align: center; }
+
+th.valign-top, td.valign-top { vertical-align: top; }
+
+th.valign-bottom, td.valign-bottom { vertical-align: bottom; }
+
+th.valign-middle, td.valign-middle { vertical-align: middle; }
+
+table thead th, table tfoot th { font-weight: bold; }
+
+tbody tr th { display: table-cell; line-height: 1.6; background: #f7f8f7; }
+
+tbody tr th, tbody tr th p, tfoot tr th, tfoot tr th p { color: rgba(0, 0, 0, 0.8); font-weight: bold; }
+
+p.tableblock > code:only-child { background: none; padding: 0; }
+
+p.tableblock { font-size: 1em; }
+
+td > div.verse { white-space: pre; }
+
+ol { margin-left: 1.75em; }
+
+ul li ol { margin-left: 1.5em; }
+
+dl dd { margin-left: 1.125em; }
+
+dl dd:last-child, dl dd:last-child > :last-child { margin-bottom: 0; }
+
+ol > li p, ul > li p, ul dd, ol dd, .olist .olist, .ulist .ulist, .ulist .olist, .olist .ulist { margin-bottom: 0.625em; }
+
+ul.unstyled, ol.unnumbered, ul.checklist, ul.none { list-style-type: none; }
+
+ul.unstyled, ol.unnumbered, ul.checklist { margin-left: 0.625em; }
+
+ul.checklist li > p:first-child > .fa-square-o:first-child, ul.checklist li > p:first-child > .fa-check-square-o:first-child { width: 1em; font-size: 0.85em; }
+
+ul.checklist li > p:first-child > input[type="checkbox"]:first-child { width: 1em; position: relative; top: 1px; }
+
+ul.inline { margin: 0 auto 0.625em auto; margin-left: -1.375em; margin-right: 0; padding: 0; list-style: none; overflow: hidden; }
+ul.inline > li { list-style: none; float: left; margin-left: 1.375em; display: block; }
+ul.inline > li > * { display: block; }
+
+.unstyled dl dt { font-weight: normal; font-style: normal; }
+
+ol.arabic { list-style-type: decimal; }
+
+ol.decimal { list-style-type: decimal-leading-zero; }
+
+ol.loweralpha { list-style-type: lower-alpha; }
+
+ol.upperalpha { list-style-type: upper-alpha; }
+
+ol.lowerroman { list-style-type: lower-roman; }
+
+ol.upperroman { list-style-type: upper-roman; }
+
+ol.lowergreek { list-style-type: lower-greek; }
+
+.hdlist > table, .colist > table { border: 0; background: none; }
+.hdlist > table > tbody > tr, .colist > table > tbody > tr { background: none; }
+
+td.hdlist1, td.hdlist2 { vertical-align: top; padding: 0 0.625em; }
+
+td.hdlist1 { font-weight: bold; padding-bottom: 1.25em; }
+
+.literalblock + .colist, .listingblock + .colist { margin-top: -0.5em; }
+
+.colist > table tr > td:first-of-type { padding: 0 0.75em; line-height: 1; }
+.colist > table tr > td:last-of-type { padding: 0.25em 0; }
+
+.thumb, .th { line-height: 0; display: inline-block; border: solid 4px white; -webkit-box-shadow: 0 0 0 1px #dddddd; box-shadow: 0 0 0 1px #dddddd; }
+
+.imageblock.left, .imageblock[style*="float: left"] { margin: 0.25em 0.625em 1.25em 0; }
+.imageblock.right, .imageblock[style*="float: right"] { margin: 0.25em 0 1.25em 0.625em; }
+.imageblock > .title { margin-bottom: 0; }
+.imageblock.thumb, .imageblock.th { border-width: 6px; }
+.imageblock.thumb > .title, .imageblock.th > .title { padding: 0 0.125em; }
+
+.image.left, .image.right { margin-top: 0.25em; margin-bottom: 0.25em; display: inline-block; line-height: 0; }
+.image.left { margin-right: 0.625em; }
+.image.right { margin-left: 0.625em; }
+
+a.image { text-decoration: none; display: inline-block; }
+a.image object { pointer-events: none; }
+
+sup.footnote, sup.footnoteref { font-size: 0.875em; position: static; vertical-align: super; }
+sup.footnote a, sup.footnoteref a { text-decoration: none; }
+sup.footnote a:active, sup.footnoteref a:active { text-decoration: underline; }
+
+#footnotes { padding-top: 0.75em; padding-bottom: 0.75em; margin-bottom: 0.625em; }
+#footnotes hr { width: 20%; min-width: 6.25em; margin: -0.25em 0 0.75em 0; border-width: 1px 0 0 0; }
+#footnotes .footnote { padding: 0 0.375em 0 0.225em; line-height: 1.3334; font-size: 0.875em; margin-left: 1.2em; text-indent: -1.05em; margin-bottom: 0.2em; }
+#footnotes .footnote a:first-of-type { font-weight: bold; text-decoration: none; }
+#footnotes .footnote:last-of-type { margin-bottom: 0; }
+
+#content #footnotes { margin-top: -0.625em; margin-bottom: 0; padding: 0.75em 0; }
+
+.gist .file-data > table { border: 0; background: #fff; width: 100%; margin-bottom: 0; }
+.gist .file-data > table td.line-data { width: 99%; }
+
+div.unbreakable { page-break-inside: avoid; }
+
+.big { font-size: larger; }
+
+.small { font-size: smaller; }
+
+.underline { text-decoration: underline; }
+
+.overline { text-decoration: overline; }
+
+.line-through { text-decoration: line-through; }
+
+.aqua { color: #00bfbf; }
+
+.aqua-background { background-color: #00fafa; }
+
+.black { color: black; }
+
+.black-background { background-color: black; }
+
+.blue { color: #0000bf; }
+
+.blue-background { background-color: #0000fa; }
+
+.fuchsia { color: #bf00bf; }
+
+.fuchsia-background { background-color: #fa00fa; }
+
+.gray { color: #606060; }
+
+.gray-background { background-color: #7d7d7d; }
+
+.green { color: #006000; }
+
+.green-background { background-color: #007d00; }
+
+.lime { color: #00bf00; }
+
+.lime-background { background-color: #00fa00; }
+
+.maroon { color: #600000; }
+
+.maroon-background { background-color: #7d0000; }
+
+.navy { color: #000060; }
+
+.navy-background { background-color: #00007d; }
+
+.olive { color: #606000; }
+
+.olive-background { background-color: #7d7d00; }
+
+.purple { color: #600060; }
+
+.purple-background { background-color: #7d007d; }
+
+.red { color: #bf0000; }
+
+.red-background { background-color: #fa0000; }
+
+.silver { color: #909090; }
+
+.silver-background { background-color: #bcbcbc; }
+
+.teal { color: #006060; }
+
+.teal-background { background-color: #007d7d; }
+
+.white { color: #bfbfbf; }
+
+.white-background { background-color: #fafafa; }
+
+.yellow { color: #bfbf00; }
+
+.yellow-background { background-color: #fafa00; }
+
+span.icon > .fa { cursor: default; }
+
+.admonitionblock td.icon [class^="fa icon-"] { font-size: 2.5em; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); cursor: default; }
+.admonitionblock td.icon .icon-note:before { content: "\f05a"; color: #19407c; }
+.admonitionblock td.icon .icon-tip:before { content: "\f0eb"; text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8); color: #111; }
+.admonitionblock td.icon .icon-warning:before { content: "\f071"; color: #bf6900; }
+.admonitionblock td.icon .icon-caution:before { content: "\f06d"; color: #bf3400; }
+.admonitionblock td.icon .icon-important:before { content: "\f06a"; color: #bf0000; }
+
+.conum[data-value] { display: inline-block; color: #fff !important; background-color: rgba(0, 0, 0, 0.8); -webkit-border-radius: 100px; border-radius: 100px; text-align: center; font-size: 0.75em; width: 1.67em; height: 1.67em; line-height: 1.67em; font-family: "Open Sans", "DejaVu Sans", sans-serif; font-style: normal; font-weight: bold; }
+.conum[data-value] * { color: #fff !important; }
+.conum[data-value] + b { display: none; }
+.conum[data-value]:after { content: attr(data-value); }
+pre .conum[data-value] { position: relative; top: -0.125em; }
+
+b.conum * { color: inherit !important; }
+
+.conum:not([data-value]):empty { display: none; }
+
+dt, th.tableblock, td.content, div.footnote { text-rendering: optimizeLegibility; }
+
+h1, h2, p, td.content, span.alt { letter-spacing: -0.01em; }
+
+p strong, td.content strong, div.footnote strong { letter-spacing: -0.005em; }
+
+p, blockquote, dt, td.content, span.alt { font-size: 1.0625rem; }
+
+p { margin-bottom: 1.25rem; }
+
+.sidebarblock p, .sidebarblock dt, .sidebarblock td.content, p.tableblock { font-size: 1em; }
+
+.exampleblock > .content { background-color: #fffef7; border-color: #e0e0dc; -webkit-box-shadow: 0 1px 4px #e0e0dc; box-shadow: 0 1px 4px #e0e0dc; }
+
+.print-only { display: none !important; }
+
+@media print { @page { margin: 1.25cm 0.75cm; }
+  * { -webkit-box-shadow: none !important; box-shadow: none !important; text-shadow: none !important; }
+  a { color: inherit !important; text-decoration: underline !important; }
+  a.bare, a[href^="#"], a[href^="mailto:"] { text-decoration: none !important; }
+  a[href^="http:"]:not(.bare):after, a[href^="https:"]:not(.bare):after { content: "(" attr(href) ")"; display: inline-block; font-size: 0.875em; padding-left: 0.25em; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  pre, blockquote, tr, img, object, svg { page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  svg { max-width: 100%; }
+  p, blockquote, dt, td.content { font-size: 1em; orphans: 3; widows: 3; }
+  h2, h3, #toctitle, .sidebarblock > .content > .title, #toctitle, .sidebarblock > .content > .title { page-break-after: avoid; }
+  #toc, .sidebarblock, .exampleblock > .content { background: none !important; }
+  #toc { border-bottom: 1px solid #ddddd8 !important; padding-bottom: 0 !important; }
+  .sect1 { padding-bottom: 0 !important; }
+  .sect1 + .sect1 { border: 0 !important; }
+  #header > h1:first-child { margin-top: 1.25rem; }
+  body.book #header { text-align: center; }
+  body.book #header > h1:first-child { border: 0 !important; margin: 2.5em 0 1em 0; }
+  body.book #header .details { border: 0 !important; display: block; padding: 0 !important; }
+  body.book #header .details span:first-child { margin-left: 0 !important; }
+  body.book #header .details br { display: block; }
+  body.book #header .details br + span:before { content: none !important; }
+  body.book #toc { border: 0 !important; text-align: left !important; padding: 0 !important; margin: 0 !important; }
+  body.book #toc, body.book #preamble, body.book h1.sect0, body.book .sect1 > h2 { page-break-before: always; }
+  .listingblock code[data-lang]:before { display: block; }
+  #footer { background: none !important; padding: 0 0.9375em; }
+  #footer-text { color: rgba(0, 0, 0, 0.6) !important; font-size: 0.9em; }
+  .hide-on-print { display: none !important; }
+  .print-only { display: block !important; }
+  .hide-for-print { display: none !important; }
+  .show-for-print { display: inherit !important; } }
+
+</style>
+<link rel="stylesheet" href="css/font-awesome.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>yinxin的笔记</h1>
+<div class="details">
+<span id="author" class="author">尹新&lt;yinxin666ccyy@gmail.com&gt;</span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">目录</div>
+<ul class="sectlevel1">
+<li><a href="#A">1. A</a>
+<ul class="sectlevel2">
+<li><a href="#Axel">1.1. Axel</a>
+<ul class="sectlevel3">
+<li><a href="#_安装">1.1.1. 安装</a></li>
+<li><a href="#_使用">1.1.2. 使用</a></li>
+</ul>
+</li>
+<li><a href="#asc转pdf">1.2. asc转pdf</a>
+<ul class="sectlevel3">
+<li><a href="#_安装ruby环境">1.2.1. 安装ruby环境</a></li>
+<li><a href="#_安装工具">1.2.2. 安装工具</a></li>
+<li><a href="#_语法高亮">1.2.3. 语法高亮</a></li>
+<li><a href="#_使用_2">1.2.4. 使用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#B">2. B</a></li>
+<li><a href="#C">3. C</a></li>
+<li><a href="#D">4. D</a>
+<ul class="sectlevel2">
+<li><a href="#docker">4.1. Docker</a>
+<ul class="sectlevel3">
+<li><a href="#_安装_2">4.1.1. 安装</a></li>
+<li><a href="#_配置">4.1.2. 配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#E">5. E</a></li>
+<li><a href="#F">6. F</a></li>
+<li><a href="#G">7. G</a>
+<ul class="sectlevel2">
+<li><a href="#git常用命令">7.1. git常用命令</a></li>
+</ul>
+</li>
+<li><a href="#H">8. H</a>
+<ul class="sectlevel2">
+<li><a href="#从http升级为https">8.1. 从http升级为https</a>
+<ul class="sectlevel3">
+<li><a href="#_生成证书">8.1.1. 生成证书</a></li>
+<li><a href="#_修改nginx配置">8.1.2. 修改nginx配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#I">9. I</a>
+<ul class="sectlevel2">
+<li><a href="#idea">9.1. idea</a>
+<ul class="sectlevel3">
+<li><a href="#_idea常用配置">9.1.1. idea常用配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#J">10. J</a>
+<ul class="sectlevel2">
+<li><a href="#简历要点">10.1. 简历要点</a>
+<ul class="sectlevel3">
+<li><a href="#_工作经历">10.1.1. 工作经历</a></li>
+<li><a href="#_项目经验">10.1.2. 项目经验</a></li>
+<li><a href="#_自我评价">10.1.3. 自我评价</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#K">11. K</a></li>
+<li><a href="#L">12. L</a>
+<ul class="sectlevel2">
+<li><a href="#linux常用设置">12.1. linux常用设置</a>
+<ul class="sectlevel3">
+<li><a href="#_pacman">12.1.1. pacman</a></li>
+<li><a href="#_固定ip地址">12.1.2. 固定ip地址</a></li>
+<li><a href="#_ssh设置">12.1.3. SSH设置</a></li>
+</ul>
+</li>
+<li><a href="#linux常用命令">12.2. linux常用命令</a></li>
+</ul>
+</li>
+<li><a href="#M">13. M</a>
+<ul class="sectlevel2">
+<li><a href="#mvn命令集">13.1. mvn命令集</a>
+<ul class="sectlevel3">
+<li><a href="#_命令集">13.1.1. 命令集</a></li>
+<li><a href="#_maven换清华源">13.1.2. maven换清华源</a></li>
+</ul>
+</li>
+<li><a href="#mysql安装">13.2. mysql安装</a>
+<ul class="sectlevel3">
+<li><a href="#_源安装">13.2.1. 源安装</a></li>
+<li><a href="#_mysql常用命令">13.2.2. mysql常用命令</a></li>
+</ul>
+</li>
+<li><a href="#MQTT-paho">13.3. MQTT-paho</a>
+<ul class="sectlevel3">
+<li><a href="#_python_paho常见问题以及解决方案">13.3.1. python-paho常见问题以及解决方案</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#N">14. N</a>
+<ul class="sectlevel2">
+<li><a href="#nginx">14.1. nginx</a>
+<ul class="sectlevel3">
+<li><a href="#_安装_3">14.1.1. 安装</a></li>
+<li><a href="#_相关配置">14.1.2. 相关配置</a></li>
+<li><a href="#_查看">14.1.3. 查看</a></li>
+<li><a href="#_nginx常用配置">14.1.4. Nginx常用配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#O">15. O</a></li>
+<li><a href="#P">16. P</a>
+<ul class="sectlevel2">
+<li><a href="#polipo">16.1. polipo</a>
+<ul class="sectlevel3">
+<li><a href="#_安装_4">16.1.1. 安装</a></li>
+<li><a href="#_配置服务">16.1.2. 配置服务</a></li>
+</ul>
+</li>
+<li><a href="#pycharm常用配置">16.2. pycharm常用配置</a>
+<ul class="sectlevel3">
+<li><a href="#_py文件头部注释">16.2.1. py文件头部注释</a></li>
+<li><a href="#_常用消除错误提示注释">16.2.2. 常用消除错误提示注释</a></li>
+</ul>
+</li>
+<li><a href="#python共享文件服务">16.3. python共享文件服务</a></li>
+<li><a href="#python多语言支持">16.4. python多语言支持</a>
+<ul class="sectlevel3">
+<li><a href="#_生成po文件">16.4.1. 生成po文件</a></li>
+<li><a href="#_生成mo文件">16.4.2. 生成mo文件</a></li>
+<li><a href="#_使用mo文件完成多语言支持">16.4.3. 使用mo文件完成多语言支持</a></li>
+</ul>
+</li>
+<li><a href="#proxychains">16.5. proxychains</a>
+<ul class="sectlevel3">
+<li><a href="#_安装_5">16.5.1. 安装</a></li>
+<li><a href="#_配置_2">16.5.2. 配置</a></li>
+<li><a href="#_使用_3">16.5.3. 使用</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#Q">17. Q</a></li>
+<li><a href="#R">18. R</a>
+<ul class="sectlevel2">
+<li><a href="#rabbitmq">18.1. rabbitmq</a>
+<ul class="sectlevel3">
+<li><a href="#_安装_6">18.1.1. 安装</a></li>
+</ul>
+</li>
+<li><a href="#redis">18.2. redis</a>
+<ul class="sectlevel3">
+<li><a href="#_安装_7">18.2.1. 安装</a></li>
+<li><a href="#_配置_3">18.2.2. 配置</a></li>
+<li><a href="#_优化配置">18.2.3. 优化配置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#S">19. S</a>
+<ul class="sectlevel2">
+<li><a href="#strace安装以及使用">19.1. strace安装以及使用</a>
+<ul class="sectlevel3">
+<li><a href="#_安装_8">19.1.1. 安装</a></li>
+<li><a href="#_使用_4">19.1.2. 使用</a></li>
+</ul>
+</li>
+<li><a href="#shadowsockets-libev">19.2. shadowsockets-libev</a>
+<ul class="sectlevel3">
+<li><a href="#_服务端">19.2.1. 服务端</a></li>
+<li><a href="#_客户端">19.2.2. 客户端</a></li>
+</ul>
+</li>
+<li><a href="#shadowsockets">19.3. shadowsockets</a>
+<ul class="sectlevel3">
+<li><a href="#_服务端安装及配置">19.3.1. 服务端安装及配置</a></li>
+<li><a href="#_客户端安装及配置">19.3.2. 客户端安装及配置</a></li>
+<li><a href="#_密码生成">19.3.3. 密码生成</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#T">20. T</a>
+<ul class="sectlevel2">
+<li><a href="#tomcat安装">20.1. tomcat安装</a>
+<ul class="sectlevel3">
+<li><a href="#_准备">20.1.1. 准备</a></li>
+<li><a href="#_启动">20.1.2. 启动</a></li>
+<li><a href="#_查看_2">20.1.3. 查看</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#U">21. U</a></li>
+<li><a href="#V">22. V</a></li>
+<li><a href="#W">23. W</a></li>
+<li><a href="#X">24. X</a></li>
+<li><a href="#Y">25. Y</a></li>
+<li><a href="#Z">26. Z</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="A">1. A</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="Axel">1.1. Axel</h3>
+<div class="paragraph">
+<p>有时候，yum/dnf/wget下载国外软件。一开始速度很快，之后速度降了下去。这个时候用多线程下载可以加速下载。</p>
+</div>
+<div class="sect3">
+<h4 id="_安装">1.1.1. 安装</h4>
+<div class="listingblock">
+<div class="title">Arch Linux</div>
+<div class="content">
+<pre>sudo pacman -S axel</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">CentOS8</div>
+<div class="content">
+<pre>wget https://github.com/axel-download-accelerator/axel/releases/download/v2.17.8/axel-2.17.8.tar.gz -O axel-2.17.8.tar.gz
+tar xf axel-2.17.8.tar.gz
+cd axel-2.17.8
+
+dnf install -y make gcc openssl-devel autoconf
+
+./configure --prefix=/usr/local/axel-2.17.8
+make &amp;&amp; make install
+
+ln -s /usr/local/axel-2.17.8/bin/axel /usr/local/bin/axel</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_使用">1.1.2. 使用</h4>
+<div class="listingblock">
+<div class="content">
+<pre>axel -n 8 https://packages.gitlab.com/gitlab/gitlab-ce/el/8/x86_64/gitlab-ce-12.10.2-ce.0.el8.x86_64.rpm</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="asc转pdf">1.2. asc转pdf</h3>
+<div class="sect3">
+<h4 id="_安装ruby环境">1.2.1. 安装ruby环境</h4>
+<div class="sect4">
+<h5 id="_windows">windows</h5>
+<div class="paragraph">
+<p>ruby官网下载</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_linux">linux</h5>
+<div class="listingblock">
+<div class="title">ubuntu</div>
+<div class="content">
+<pre>sudo apt-get install ruby</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">cenos</div>
+<div class="content">
+<pre>sudo dnf install ruby rubygem-bundler</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_安装工具">1.2.2. 安装工具</h4>
+<div class="paragraph">
+<p>转PDF的Ruby库</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>gem install asciidoctor-pdf --pre</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_语法高亮">1.2.3. 语法高亮</h4>
+<div class="sect4">
+<h5 id="_安装库">安装库</h5>
+<div class="listingblock">
+<div class="content">
+<pre>gem install rouge
+gem install pygments.rb
+gem install coderay</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_添加语法高亮属性">添加语法高亮属性</h5>
+<div class="paragraph">
+<p><code>:source-highlighter: rouge</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_使用_2">1.2.4. 使用</h4>
+<div class="listingblock">
+<div class="content">
+<pre>asciidoctor -r asciidoctor-pdf -b pdf basic-example.adoc</pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_中文支持">中文支持</h5>
+<div class="paragraph">
+<p>安装库</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>gem install asciidoctor-pdf-cjk</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>安装字体（需要翻墙）</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>gem install asciidoctor-pdf-cjk-kai_gen_gothic
+asciidoctor-pdf-cjk-kai_gen_gothic-install</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>使用</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>asciidoctor-pdf -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=THEME doc.asc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>THEME可选值</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>KaiGenGothicCN
+KaiGenGothicJP
+KaiGenGothicKR
+KaiGenGothicTW</pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+asciidoctor-pdf-cjk只有beta.1版本支持转pdf不会报错，如果发现是非beta.1需要换成beta.1。
+字体下载需要翻墙，网速慢可以直接找已经下好的包
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="B">2. B</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="C">3. C</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="D">4. D</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="docker">4.1. Docker</h3>
+<div class="sect3">
+<h4 id="_安装_2">4.1.1. 安装</h4>
+<div class="listingblock">
+<div class="title">arch</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash"><span></span>sudo pacman -S docker</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_配置">4.1.2. 配置</h4>
+<div class="listingblock">
+<div class="title">配置文件</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash"><span></span>cat <span class="tok-s">&lt;&lt; EOF &gt; /etc/docker/daemon.json</span>
+<span class="tok-s">{</span>
+<span class="tok-s">  &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;],</span>
+<span class="tok-s">  &quot;data-root&quot;: &quot;/data/var/lib/docker&quot;,</span>
+<span class="tok-s">  &quot;storage-driver&quot;: &quot;overlay2&quot;</span>
+<span class="tok-s">}</span>
+<span class="tok-s">EOF</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="E">5. E</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="F">6. F</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="G">7. G</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="git常用命令">7.1. git常用命令</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">合并两次提交, pick改为s的会融合到pick里</dt>
+<dd>
+<p>git rebase -i HEAD~2</p>
+</dd>
+<dt class="hdlist1">撤销上次提交到暂存区</dt>
+<dd>
+<p>git reset --soft HEAD^</p>
+</dd>
+<dt class="hdlist1">撤销上次提交并修改作者</dt>
+<dd>
+<p>git commit --amend --reset-author</p>
+</dd>
+<dt class="hdlist1">取消暂存</dt>
+<dd>
+<p>git restore --staged &lt;文件&gt;&#8230;&#8203;</p>
+</dd>
+<dt class="hdlist1">项目级设置</dt>
+<dd>
+<p>git config …​…​</p>
+</dd>
+<dt class="hdlist1">系统级设置</dt>
+<dd>
+<p>git config --global …​…​</p>
+</dd>
+<dt class="hdlist1">全局默认编辑器</dt>
+<dd>
+<p>git config --global core.editor vim</p>
+</dd>
+<dt class="hdlist1">全局用户名称</dt>
+<dd>
+<p>git config --global user.name "foo"</p>
+</dd>
+<dt class="hdlist1">全局Email</dt>
+<dd>
+<p>git config --global user.email <a href="mailto:foo@example.com">foo@example.com</a>
+git config user.email <a href="mailto:xin.yin@thytiot.com">xin.yin@thytiot.com</a>
+git config --global user.email <a href="mailto:yinxin666ccyy@gmail.com">yinxin666ccyy@gmail.com</a></p>
+</dd>
+<dt class="hdlist1">git status 显示中文</dt>
+<dd>
+<p>git config --global core.quotepath false</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="H">8. H</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="从http升级为https">8.1. 从http升级为https</h3>
+<div class="sect3">
+<h4 id="_生成证书">8.1.1. 生成证书</h4>
+<div class="sect4">
+<h5 id="_openssl生成">openssl生成</h5>
+<div class="listingblock">
+<div class="content">
+<pre>openssl req -new -newkey rsa:2048 -sha256 -nodes -out foo.csr -keyout foo.key -subj "/C=CN/ST=foo/L=foo/O=foo Inc./OU=Web Security/CN=foo.com"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>/C</code> 填国家
+<code>/ST</code> 填省份
+<code>/L</code> 填城市
+<code>/O</code> 填公司名称
+<code>/CN</code> 填域名</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_letsencrypt谷歌免费证书">letsencrypt谷歌免费证书</h5>
+<div class="sect5">
+<h6 id="_安装certbot">安装certbot</h6>
+<div class="listingblock">
+<div class="content">
+<pre>yum insatll certbot</pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_生成证书_2">生成证书</h6>
+<div class="listingblock">
+<div class="content">
+<pre>certbot certonly --standalone -d example.com -d www.example.com</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>更多方法可以在官网查看<br>
+<a href="https://certbot.eff.org/docs/using.html#manual" class="bare">https://certbot.eff.org/docs/using.html#manual</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_修改nginx配置">8.1.2. 修改nginx配置</h4>
+<div class="listingblock">
+<div class="content">
+<pre># 备份配置文件
+cp /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.back
+# 修改配置文件
+vim /etc/nginx/conf.d/default.conf</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>添加一个server</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>server {
+    listen              443 ssl;
+    server_name         www.example.com;
+    ssl_certificate     www.example.com.crt;
+    ssl_certificate_key www.example.com.key;
+    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers         HIGH:!aNULL:!MD5;
+    ...
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>将原来的http重定向到https</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>server {
+    listen      80;
+    server_name  www.example.com;
+    return      301 https://$server_name$request_uri;
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="I">9. I</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="idea">9.1. idea</h3>
+<div class="sect3">
+<h4 id="_idea常用配置">9.1.1. idea常用配置</h4>
+<div class="sect4">
+<h5 id="_重写tostring模板">重写toString()模板</h5>
+<div class="paragraph">
+<p>JSON template</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>public java.lang.String toString() {
+#if ( $members.size() &gt; 0 )
+#set ( $i = 0 )
+    return "{" +
+#foreach( $member in $members )
+#set ( $i = $i + 1 )
+#if ( $i == $members.size() )
+#set ( $postfix = "+" )
+#else
+#set ( $postfix = "+ "", "" + " )
+#end
+#if ( $member.collection )
+    "\"$member.name\":" + ($member.accessor == null ? "null" : java.util.Arrays.toString($member.accessor .toArray())) $postfix
+#elseif ( $member.objectArray )
+    "\"$member.name\":" + java.util.Arrays.toString($member.accessor) $postfix
+#elseif ( $member.primitiveArray )
+    "\"$member.name\":" + java.util.Arrays.toString($member.accessor) $postfix
+#elseif ( $member.object )
+    #if ($member.typeQualifiedName.contains("java.lang"))
+    "\"$member.name\":" + ($member.accessor == null ? "null" : "\"" + $member.accessor + "\"" ) $postfix
+    #else
+    "\"$member.name\":" + ($member.accessor == null ? "null" : $member.accessor ) $postfix
+    #end
+#else
+    "\"$member.name\":\"" + $member.accessor + "\"" $postfix
+#end
+#end
+    "}";
+#else
+    return "{}";
+#end
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_头部注释">头部注释</h5>
+<div class="listingblock">
+<div class="content">
+<pre>/*
+ * @Time : ${DATE} ${TIME}
+ * @Author : 尹新
+ * @Site : ${SITE}
+ * @File : ${NAME}
+ * @Software: ${PRODUCT_NAME}
+ */</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="J">10. J</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="简历要点">10.1. 简历要点</h3>
+<div class="paragraph">
+<p>简历要让HR通过简历了解你的工作经历，如同开启上帝视角</p>
+</div>
+<div class="sect3">
+<h4 id="_工作经历">10.1.1. 工作经历</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>你是谁? 任职公司是? 岗位? 时间?</p>
+</li>
+<li>
+<p>你在公司做什么?</p>
+</li>
+<li>
+<p>基于上面做的事情, 成果如何?</p>
+</li>
+<li>
+<p>经历过这些之后, 学到了什么?</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+换工作不能太频繁, 最好简历上一年半以上才换<br>
+离职证明用于保证你和上家公司没有纠纷
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+工作经历尽量真实(简历上最后一家公司离职时间和离职证明保持一致)
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_项目经验">10.1.2. 项目经验</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>具体怎么做工作的</p>
+</li>
+<li>
+<p>项目责任需要分别与关键字挂钩(核心价值)</p>
+</li>
+<li>
+<p>项目概要做到精简, 如果有类似的产品直接点出</p>
+</li>
+<li>
+<p>项目成果必须要落到实处。比如: 数字, 百分比, 销售额等和数字挂钩</p>
+</li>
+<li>
+<p>项目经历最多3-5个</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_自我评价">10.1.3. 自我评价</h4>
+<div class="paragraph">
+<p>理解应聘岗位的核心价值</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">程序员的核心价值</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>按期交付</p>
+</li>
+<li>
+<p>熟悉业务</p>
+</li>
+<li>
+<p>快速学习</p>
+</li>
+<li>
+<p>抗压能力</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">产品经理核心价值</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>准确传达想要的功能, 将需求转换为程序员理解的形式, 即 <code>保真</code></p>
+</li>
+<li>
+<p>产品经理最终的目标是让产品得到客户认可, 让产品产生更多价值</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="K">11. K</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="L">12. L</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="linux常用设置">12.1. linux常用设置</h3>
+<div class="sect3">
+<h4 id="_pacman">12.1.1. pacman</h4>
+<div class="paragraph">
+<p>Archlinux默认没有开启Multilib仓库，需要编辑 <code>/etc/pacman.conf</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>-#[multilib]
+-#Include = /etc/pacman.d/mirrorlist
++[multilib]
++Include = /etc/pacman.d/mirrorlist</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_固定ip地址">12.1.2. 固定ip地址</h4>
+<div class="paragraph">
+<div class="title">centos</div>
+<p>编辑 <code>/etc/sysconfig/network-scripts/ifcfg-enp*</code> 文件的 <code>IPADDR</code> 项</p>
+</div>
+<div class="paragraph">
+<div class="title">arch</div>
+<p>列出 IP 地址</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ip address show</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>将 IP 地址添加到接口</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ip address add address/prefix_len broadcast + dev interface
+# ip address add 192.168.102.134/24 broadcast + dev wlp1s0</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ssh设置">12.1.3. SSH设置</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash"><span></span><span class="tok-c1"># ssh登录时，登录ip被会反向解析为域名，导致ssh登录缓慢</span>
+sed -i <span class="tok-s2">&quot;s/#UseDNS yes/UseDNS no/&quot;</span> /etc/ssh/sshd_config
+sed -i <span class="tok-s2">&quot;s/GSSAPIAuthentication yes/GSSAPIAuthentication no/&quot;</span> /etc/ssh/sshd_config
+sed -i <span class="tok-s2">&quot;s/GSSAPICleanupCredentials yes/GSSAPICleanupCredentials no/&quot;</span> /etc/ssh/sshd_config
+sed -i <span class="tok-s2">&quot;s/#MaxAuthTries 6/MaxAuthTries 10/&quot;</span> /etc/ssh/sshd_config
+<span class="tok-c1"># server每隔30秒发送一次请求给client，然后client响应，从而保持连接</span>
+sed -i <span class="tok-s2">&quot;s/#ClientAliveInterval 0/ClientAliveInterval 30/&quot;</span> /etc/ssh/sshd_config
+<span class="tok-c1"># server发出请求后，客户端没有响应得次数达到3，就自动断开连接，正常情况下，client不会不响应</span>
+sed -i <span class="tok-s2">&quot;s/#ClientAliveCountMax 3/ClientAliveCountMax 10/&quot;</span> /etc/ssh/sshd_config</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="linux常用命令">12.2. linux常用命令</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">linux传文件</dt>
+<dd>
+<p>scp fileName  userNmae@Host:/Path</p>
+</dd>
+<dt class="hdlist1">管理java环境</dt>
+<dd>
+<p>alternatives --config java</p>
+</dd>
+<dt class="hdlist1">滚动查看文件</dt>
+<dd>
+<p>tail -f filename</p>
+</dd>
+<dt class="hdlist1">放置ssh公钥到服务器</dt>
+<dd>
+<p>ssh-copy-id -i foo.pub root@host</p>
+</dd>
+<dt class="hdlist1">改变命令别名</dt>
+<dd>
+<p>vim /root/.bashrc</p>
+</dd>
+<dt class="hdlist1">重新加载命令别名</dt>
+<dd>
+<p>source /root/.bashrc</p>
+</dd>
+<dt class="hdlist1">滚动查看文件更新</dt>
+<dd>
+<p>tail -f fileName</p>
+</dd>
+<dt class="hdlist1">管道加xargs, 将管道前的结果拆分成单个的参数传给后面命令</dt>
+<dd>
+<p>ls |xargs  cat</p>
+</dd>
+<dt class="hdlist1">按行分隔</dt>
+<dd>
+<p>awk<br>
+示例: awk '{print $2}'</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="M">13. M</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="mvn命令集">13.1. mvn命令集</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">mvn spring-boot:run</dt>
+<dd>
+<p>启动springboot</p>
+</dd>
+<dt class="hdlist1">java -jar PATH/TO/JAR</dt>
+<dd>
+<p>运行jar包:: 通过jar运行(jar包的地址在执行完mvn后有显示)</p>
+</dd>
+</dl>
+</div>
+<div class="sect3">
+<h4 id="_命令集">13.1.1. 命令集</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">mvn clean</dt>
+<dd>
+<p>清除</p>
+</dd>
+<dt class="hdlist1">mvn compile</dt>
+<dd>
+<p>编译</p>
+</dd>
+<dt class="hdlist1">mvn validate</dt>
+<dd>
+<p>验证mvn配置</p>
+</dd>
+<dt class="hdlist1">mvn test</dt>
+<dd>
+<p>运行单元测试</p>
+</dd>
+<dt class="hdlist1">mvn verify</dt>
+<dd>
+<p>验证编译后的程序</p>
+</dd>
+<dt class="hdlist1">mvn install</dt>
+<dd>
+<p>安装应用到maven目录</p>
+</dd>
+<dt class="hdlist1">mvn deploy</dt>
+<dd>
+<p>编译</p>
+</dd>
+<dt class="hdlist1">mvn package</dt>
+<dd>
+<p>打包</p>
+</dd>
+<dt class="hdlist1">mvn war:exploded</dt>
+<dd>
+<p>Create an exploded webapp in a specified directory.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_maven换清华源">13.1.2. maven换清华源</h4>
+<div class="paragraph">
+<p>修改maven根目录下的conf文件夹中的 <code>setting.xml</code> 文件,换成以下内容</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;settings&gt;
+  &lt;mirrors&gt;
+    &lt;mirror&gt;
+      &lt;id&gt;aliyun&lt;/id&gt;
+      &lt;name&gt;Aliyun Central&lt;/name&gt;
+        &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+      &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+    &lt;/mirror&gt;
+  &lt;/mirrors&gt;
+&lt;/settings&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mysql安装">13.2. mysql安装</h3>
+<div class="sect3">
+<h4 id="_源安装">13.2.1. 源安装</h4>
+<div class="paragraph">
+<p>centos8</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install mysql-server
+dnf install mysql
+
+# 初始化mysql密码
+mysql
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'admin';</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mysql常用命令">13.2.2. mysql常用命令</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">添加用户 (MySQL5.7及以上)</dt>
+<dd>
+<p>CREATE USER 'finley'@'localhost' IDENTIFIED BY 'password';<br>
+GRANT ALL ON <strong>.</strong> TO 'root'@'%.%.%.%' WITH GRANT OPTION;</p>
+</dd>
+<dt class="hdlist1">添加用户</dt>
+<dd>
+<p>grant all privileges on <strong>.</strong>  to root@"%.%.%.%" identified by "password";<br></p>
+</dd>
+<dt class="hdlist1">赋予用户grant权限</dt>
+<dd>
+<p>update user set Grant_priv='Y' where User='root' and Host='%.%.%.%';</p>
+</dd>
+<dt class="hdlist1">确认修改</dt>
+<dd>
+<p>flush privileges;</p>
+</dd>
+<dt class="hdlist1">修改表字符集</dt>
+<dd>
+<p>ALTER TABLE ps CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</p>
+</dd>
+<dt class="hdlist1">修改数据库字符集</dt>
+<dd>
+<p>ALTER DATABASE ttd CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;</p>
+</dd>
+<dt class="hdlist1">使用 <code>utf8mb4</code> 建数据库</dt>
+<dd>
+<p>CREATE DATABASE <code>test2</code> DEFAULT CHARACTER SET utf8mb4  DEFAULT COLLATE utf8mb4_unicode_ci;</p>
+</dd>
+<dt class="hdlist1">使用 <code>utf8mb4</code> 建数据库</dt>
+<dd>
+<p>CREATE DATABASE <code>test2</code> DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;<br>
+CREATE DATABASE xxl_job DEFAULT CHARACTER SET utf8mb4  DEFAULT COLLATE utf8mb4_unicode_ci;:</p>
+</dd>
+<dt class="hdlist1">dump表，如果存在先删除再创建</dt>
+<dd>
+<p>mysqldump -uname -ppassword --add-drop-table foo &gt;foo.sql</p>
+</dd>
+<dt class="hdlist1">从sql文件添加表</dt>
+<dd>
+<p>mysql -uname -ppassword foo &lt;./chuangongedu_com.sql</p>
+</dd>
+<dt class="hdlist1">加入skip-grant-tables</dt>
+<dd>
+<p>vim /etc/my.cnf
+/etc/init.d/mysqld restart
+mysql
+use mysql
+update user set password=password("xei9Iinaiqueivai") where user="root";
+flush privileges;
+exit
+/etc/init.d/mysqld restart</p>
+</dd>
+<dt class="hdlist1">更改master</dt>
+<dd>
+<p>CHANGE MASTER TO MASTER_HOST='61.139.76.160',  MASTER_USER='repl', MASTER_PASSWORD='DJWnoH9wuSQxRD0XGArK', MASTER_PORT=3306,   MASTER_AUTO_POSITION = 1;</p>
+</dd>
+<dt class="hdlist1">临时启用性能调优</dt>
+<dd>
+<p>set profiling=on;
+show profiles;
+show profile for query query_id;
+set global query_cache_type=on;
+show global variables like '%time%';</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="MQTT-paho">13.3. MQTT-paho</h3>
+<div class="sect3">
+<h4 id="_python_paho常见问题以及解决方案">13.3.1. python-paho常见问题以及解决方案</h4>
+<div class="paragraph">
+<div class="title">client id问题</div>
+<p>mosqutto服务器有限制，每一个客户端连接都需要指定自己的client id（paho库有一个默认id），当一个客户端连接上mosqutto服务器时，mosqutto会把之前带有该id的客户端下线，再与新的客户端建立连接。换句话说，如果要保证一个应用内有多个mosqutto客户端保持连接，就要为每个mosqutto客户端设置不同的id</p>
+</div>
+<div class="paragraph">
+<p>解决办法:<br>
+每次使用mosqutto客户端时都按照功能和用途指定详细的id</p>
+</div>
+<div class="paragraph">
+<div class="title">loop_forever问题</div>
+<p>当mosqutto客户端消费者使用loop_forever监听队列时，可能会导致其他的使用loop_start监听队列的消费者离线。举个例子，有一个消费者A使用loop_start的方式后台监听队列，再有一个消费者B使用loop_forever监听队列，消费者A可能会被离线，原因未知</p>
+</div>
+<div class="paragraph">
+<p>解决办法:<br>
+如果一个应用内需要同时启动多个监听，全部都使用loop_start来监听消息队列。如果需要保证程序不退出，采用在最后一个loop_start监听后添加无限循环来保证</p>
+</div>
+<div class="paragraph">
+<div class="title">publish_single问题</div>
+<p>paho提供了只发送单条消息的方法 <code>publish_single</code> ，该方法会自动创建一个连接并发送消息，最终关闭连接。在libthcl-python库中使用MqttPub对这一方法进行了封装，使用 <code>publish_single</code> 会出现两个客户端被启动，只有一个客户端停止的情况。</p>
+</div>
+<div class="paragraph">
+<p>解决方法:
+已经修复。目前代码里采用的是主动调用 <code>disconnection</code> 方法关闭连接，代码如下:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pub = MqttPub()
+pub.init()
+pub.publish_single('test', 'test', 0)
+pub.mqtt_client.disconnect()</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="N">14. N</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="nginx">14.1. nginx</h3>
+<div class="sect3">
+<h4 id="_安装_3">14.1.1. 安装</h4>
+<div class="sect4">
+<h5 id="_linux源安装">linux源安装</h5>
+<div class="listingblock">
+<div class="content">
+<pre># centos
+sudo yum install nginx</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_相关配置">14.1.2. 相关配置</h4>
+<div class="sect4">
+<h5 id="_配置_nginx_服务">配置 Nginx 服务</h5>
+<div class="paragraph">
+<p>开机启动</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl enable nginx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>启动服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl start nginx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>重启服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl restart nginx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>停止服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl stop nginx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>重新加载，因为一般重新配置之后，不希望重启服务，这时可以使用重新加载。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl reload nginx</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_关闭防火墙">关闭防火墙</h5>
+<div class="paragraph">
+<p>关闭防火墙</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl stop firewalld.service</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>禁止防火墙开机启动</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl disable firewalld.service</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_关闭selinux">关闭selinux</h5>
+<div class="paragraph">
+<p>重启后生效</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>echo SELINUX=disabled&gt;/etc/selinux/config
+echo SELINUXTYPE=targeted&gt;&gt;/etc/selinux/config</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_查看">14.1.3. 查看</h4>
+<div class="paragraph">
+<p>服务器本机</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -I http://127.0.0.1:80</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>其他pc或服务器</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -I http://服务器ip:80</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_nginx常用配置">14.1.4. Nginx常用配置</h4>
+<div class="sect4">
+<h5 id="_代理均衡负载tcp">代理(均衡负载)tcp</h5>
+<div class="paragraph">
+<p>首先在nginx默认配置下添加(与http同级)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>stream {
+        include /etc/nginx/conf.d/tcp/*.conf;
+}</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>在 <code>/etc/nginx/conf.d/tcp/</code> 下添加文件 <code>proxy.conf</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>upstream backend {
+
+    server backend1.example.com:12345  weight=5;
+    server backend2.example.com:12345;
+    server unix:/tmp/backend3;
+
+    server backup1.example.com:12345   backup;
+    server backup2.example.com:12345   backup;
+}
+
+server {
+    listen 12346;
+    proxy_pass backend;
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="O">15. O</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="P">16. P</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="polipo">16.1. polipo</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>proxychains主要的作用是将socks代理转换为http代理</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>官方文档: <a href="https://www.irif.fr/~jch/software/polipo/" class="bare">https://www.irif.fr/~jch/software/polipo/</a></p>
+</div>
+<div class="sect3">
+<h4 id="_安装_4">16.1.1. 安装</h4>
+<div class="paragraph">
+<p>源安装</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install polipo</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>编译安装</p>
+</div>
+<div class="paragraph">
+<p>到github下载最新版本<br>
+<a href="https://github.com/jech/polipo/releases" class="bare">https://github.com/jech/polipo/releases</a></p>
+</div>
+<div class="paragraph">
+<p>下载完解压, 进入项目目录</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>make all
+make install</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>修改配置</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mkdir /etc/polipo/
+cat &lt;&lt;EOF &gt;/etc/polipo/config
+proxyAddress = "0.0.0.0"
+socksParentProxy = "127.0.0.1:1080"
+socksProxyType = socks5
+EOF</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>启动</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>polipo</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_配置服务">16.1.2. 配置服务</h4>
+<div class="paragraph">
+<p>polipo服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &lt;&lt; EOF &gt;/usr/lib/systemd/system/polipo.service
+
+[Unit]
+Description=polipo Service
+After=network.target shadowsocks.service
+
+[Service]
+Type=simple
+User=yinxin
+ExecStart=polipo
+
+[Install]
+WantedBy=multi-user.target
+EOF</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="pycharm常用配置">16.2. pycharm常用配置</h3>
+<div class="sect3">
+<h4 id="_py文件头部注释">16.2.1. py文件头部注释</h4>
+<div class="paragraph">
+<p>文件模板添加以下内容</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# @Time : ${DATE} ${TIME}
+# @Author : 尹新
+# @Site : ${SITE}
+# @File : ${NAME}
+# @Software: ${PRODUCT_NAME}</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_常用消除错误提示注释">16.2.2. 常用消除错误提示注释</h4>
+<div class="listingblock">
+<div class="content">
+<pre># noinspection PyUnusedLocal
+# 不检查是否使用
+
+# noinspection PyTypeChecker
+# 不检查类型转换问题
+
+# noinspection PyMethodMayBeStatic
+# 不检查是否类的静态方法
+
+# noinspection PyArgumentList
+不检查方法所要求的参数
+
+# noinspection PyUnresolvedReferences
+# 不检查类是否有这个方法
+
+# noinspection PyBroadException
+# 不检查异常是否范围过大</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="python共享文件服务">16.3. python共享文件服务</h3>
+<div class="paragraph">
+<p>使用python的http模块可以快速搭建起一个http文件服务器, 只需要在命令行使用 <code>python -m http.server 8000</code> 就可以将当前文件夹作为http服务的目录。基于这一点我们可以方便的进行文件共享。</p>
+</div>
+<div class="paragraph">
+<p>由于共享次数太多，每次需要手动输入指令, 并且需要占用一个终端，所以经想到了利用 <code>systemd</code> 来管理服务。</p>
+</div>
+<div class="listingblock">
+<div class="title">添加service文件</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash"><span></span>mkdir /share
+
+sudo -i
+
+cat <span class="tok-s">&lt;&lt; EOF &gt;/usr/lib/systemd/system/http-share.service</span>
+<span class="tok-s">[Unit]</span>
+<span class="tok-s">Description=python http server</span>
+<span class="tok-s">After=network-online.target</span>
+<span class="tok-s">Wants=network-online.target</span>
+
+<span class="tok-s">[Service]</span>
+<span class="tok-s">Type=simple</span>
+<span class="tok-s">User=yinxin</span>
+<span class="tok-s">WorkingDirectory=/share</span>
+<span class="tok-s">ExecStart=/usr/bin/python -m http.server 2345</span>
+
+<span class="tok-s">[Install]</span>
+<span class="tok-s">WantedBy=multi-user.target</span>
+<span class="tok-s">EOF</span></code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">启动服务</div>
+<div class="content">
+<pre>systemctl enable http-share.service
+systemctl start http-share.service
+systemctl status http-share.service</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="python多语言支持">16.4. python多语言支持</h3>
+<div class="paragraph">
+<p>python多语言支持使用gettext, 主要分为两个部分: 根据po文件生成mo文件，使用mo文件实现多语言。</p>
+</div>
+<div class="sect3">
+<h4 id="_生成po文件">16.4.1. 生成po文件</h4>
+<div class="paragraph">
+<p>po文件可以使用 <code>xgettext -d foo -o locales/foo.pot foo.py</code> 从代码生成</p>
+</div>
+<div class="paragraph">
+<p>foo.py的写法如下</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>import  gettext
+_ = gettext.gettext
+
+_("你好")</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>生成的pot文件如下</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR &lt;EMAIL@ADDRESS&gt;, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-17 16:54+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME &lt;EMAIL@ADDRESS&gt;\n"
+"Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "你好"
+msgstr ""</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>添加翻译</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>msgid "你好"
+msgstr "hello"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>直接将pot重名为po即可</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+    可以使用这种方式生成po文件，也可以自己根据文件格式手写。
+    如果需要使用 <code>Content-Type</code> 这样的类似于请问头的属性，最前面的 'msgid ""
+    msgstr ""' 需要保留
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_生成mo文件">16.4.2. 生成mo文件</h4>
+<div class="paragraph">
+<p>使用 <code>msgfmt -o locale/foo/LC_MESSAGES/foo.mo foo.po</code> 生成mo文件</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+    mo文件的目录层级是固定的，其中 <code>LC_MESSAGES</code> 是固定文件夹名，如果需要添加多个语言的支持，则在 <code>locale</code> 下添加 <code>bar/LC_MESSAGES/bar.mo</code> 即可
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_使用mo文件完成多语言支持">16.4.3. 使用mo文件完成多语言支持</h4>
+<div class="listingblock">
+<div class="content">
+<pre>import  gettext
+
+lang_translations = gettext.translation('foo', localedir='locale', languages=['foo'])
+lang_translations.install()
+# define _ shortcut for translations
+_ = lang_translations.gettext
+
+# mark a string translatable
+print(_("你好"))</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="proxychains">16.5. proxychains</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>proxychains主要的作用是在某一次网络请求需要代理时，走设定的代理路线
+比如临时下一个包需要翻墙，在命令前加上 proxychains 就能让这个命令走ss的代理</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_安装_5">16.5.1. 安装</h4>
+<div class="paragraph">
+<p>源安装</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install proxychains</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_配置_2">16.5.2. 配置</h4>
+<div class="paragraph">
+<p>修改配置文件, 将最后以后一行(<code>socks4</code> 开头)注释掉，改为 <code>socks5 	127.0.0.1 1080</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo vim /etc/proxychains.conf</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_使用_3">16.5.3. 使用</h4>
+<div class="paragraph">
+<p>在某个命令需要网络时，可以在开头加上 <code>proxychains</code> 达到走代理的效果<br>
+比如</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>proxychains pip install -i https://pypi.python.org/pypi happy-pyhton --user</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这条命令会通过代理下载pip包</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Q">17. Q</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="R">18. R</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="rabbitmq">18.1. rabbitmq</h3>
+<div class="sect3">
+<h4 id="_安装_6">18.1.1. 安装</h4>
+<div class="paragraph">
+<p>centos8</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install erlang
+# 添加rabbitmq.repo
+rpm --import https://packagecloud.io/rabbitmq/rabbitmq-server/gpgkey
+rpm --import https://packagecloud.io/gpg.key
+rpm --import https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc
+vim /etc/yum.repos.d/rabbitmq.repo
+rpm --import https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc
+
+# 安装
+dnf install rabbitmq-server
+# 启动
+systemctl start rabbitmq-server.service
+systemctl enable rabbitmq-server.service
+
+# 启动webui
+rabbitmq-plugins enable rabbitmq_management
+
+# 添加用户
+rabbitmqctl add_user 'thcl' 'thcl'
+
+# 用户远程登陆权限
+# rabbitmqctl set_permissions -p '/' 'thcl' '.*' '.*' '.*'
+
+rabbitmqctl list_users</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redis">18.2. redis</h3>
+<div class="paragraph">
+<p>仅在centos8下安装</p>
+</div>
+<div class="sect3">
+<h4 id="_安装_7">18.2.1. 安装</h4>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install redis</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_配置_3">18.2.2. 配置</h4>
+<div class="paragraph">
+<p>设置开机启动</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl enable redis</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>启动</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl start redis</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>重启</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl restart redis</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>关闭</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl stop redis</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>从空密码设置密码</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>redis-cli
+config set requirepass foo_password</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_优化配置">18.2.3. 优化配置</h4>
+<div class="paragraph">
+<p>配置文件下</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>maxmemory-policy volatile-lru
+    volatile-lru:从已设置过期时间的数据集(server.db[i].expires)中挑选最近最少使用的数据淘汰
+    volatile-ttl:从已设置过期时间的数据集(server.db[i].expires)中挑选将要过期的数据淘汰
+    volatile-random:从已设置过期时间的数据集(server.db[i].expires)中任意选择数据淘汰
+    allkeys-lru:从数据集(server.db[i].dict)中挑选最近最少使用的数据淘汰
+    allkeys-random:从数据集(server.db[i].dict)中任意选择数据淘汰
+    no-enviction(驱逐):禁止驱逐数据,新写入操作会报错
+    ps:如果没有设置 expire 的key, 不满足先决条件(prerequisites); 那么 volatile-lru, volatile-random 和volatile-ttl 策略的行为, 和no-enviction(不删除)基本一致</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="S">19. S</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="strace安装以及使用">19.1. strace安装以及使用</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+strace用于分析软件的系统调用
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_安装_8">19.1.1. 安装</h4>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install strace</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_使用_4">19.1.2. 使用</h4>
+<div class="listingblock">
+<div class="content">
+<pre>strace -f &lt;service name&gt;
+# example
+# strace -f nginx</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="shadowsockets-libev">19.2. shadowsockets-libev</h3>
+<div class="paragraph">
+<p>shadowsockets使用的算法已经过时, 服务器容易被墙, 使用shadowsockets-libev的新算法可以避免被墙</p>
+</div>
+<div class="sect3">
+<h4 id="_服务端">19.2.1. 服务端</h4>
+<div class="sect4">
+<h5 id="_开启bbr">开启bbr</h5>
+<div class="listingblock">
+<div class="content">
+<pre>cat &lt;&lt; EOF &gt; install.sh
+# 1. 第一阶段，安装最新版内核以支持tcp_bbr
+
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+dnf install -y https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm
+dnf --enablerepo=elrepo-kernel install -y kernel-ml
+
+lastest_kernel=`grep "menuentry 'CentOS Linux" /boot/grub2/grub.cfg|awk -F "'" '{print $2}'|head -n 1`
+
+grub2-set-default "$lastest_kernel"
+
+rm -f /boot/grub2/grub.cfg.bak
+cp /boot/grub2/grub.cfg /boot/grub2/grub.cfg.bak
+grub2-mkconfig -o /boot/grub2/grub.cfg
+
+#reboot
+
+# 2. 第二阶段，设置并启用tcp_bbr模块及其参数
+# 开机后 uname -r 看看是不是内核 &gt;= 4.9。
+uname -r
+
+# 加载内核模块
+modprobe tcp_bbr
+echo "tcp_bbr" | tee --append /etc/modules-load.d/modules.conf
+# 确认加载
+lsmod | grep bbr
+
+# 设置网络参数
+echo "net.core.default_qdisc=fq" &gt;&gt; /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" &gt;&gt; /etc/sysctl.conf
+# 生效配置
+sysctl -p
+
+# 检验参数。如果结果都有 bbr，则证明你的内核已开启 BBR。
+sysctl net.ipv4.tcp_available_congestion_control
+sysctl net.ipv4.tcp_congestion_control
+
+EOF
+
+sh install.sh</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_安装_9">安装</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_安装_10">安装</h5>
+<div class="listingblock">
+<div class="content">
+<pre>dnf install -y git gettext gcc make autoconf libtool openssl-devel automake libsodium-devel zlib-devel pcre-devel libev-devel udns-devel mbedtls-devel c-ares-devel asciidoc xmlto
+git clone https://github.com/shadowsocks/shadowsocks-libev.git
+cd shadowsocks-libev
+git submodule update --init
+sh ./autogen.sh
+./configure --prefix=/usr/local/shadowsocks-libev
+
+make &amp;&amp; make install</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_配置_4">配置</h5>
+<div class="paragraph">
+<div class="title">shadowsocks-libev配置</div>
+<p><code>server_port</code> 为ss服务端口,<code>password</code> 为服务密码,建议设置16位随机密码<a href="#password">[password]</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &lt;&lt; EOF &gt;/etc/shadowsocks.json
+{
+    "server":"0.0.0.0",
+    "server_port":$server_port,
+    "password":"$password",
+    "timeout":300,
+    "method":"chacha20-ietf-poly1305",
+    "fast_open":false,
+    "workers":3
+}
+EOF</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">shadowsocks-libev服务</div>
+<div class="content">
+<pre>cat &lt;&lt;EOF &gt; /usr/lib/systemd/system/shadowsocks.service
+[Unit]
+Description=Shadowsocks Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+PIDFile=/tmp/shadowsocks.pid
+ExecStart=/usr/local/shadowsocks-libev/bin/ss-server -c /etc/shadowsocks.json -f /tmp/shadowsocks.pid -v
+
+[Install]
+WantedBy=multi-user.target
+
+EOF</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">启动ss服务</div>
+<div class="content">
+<pre>systemctl enable shadowsocks
+systemctl start shadowsocks
+systemctl status shadowsocks</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_关闭防火墙_2">关闭防火墙</h5>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl stop firewalld
+systemctl disable firewalld</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_客户端">19.2.2. 客户端</h4>
+<div class="sect4">
+<h5 id="_安装_11">安装</h5>
+<div class="listingblock">
+<div class="title">Arch Linux</div>
+<div class="content">
+<pre>pacman -S shadowsocks-libev</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_配置_5">配置</h5>
+<div class="paragraph">
+<div class="title">shadowsocks-libev配置</div>
+<p>这里 <code>ip</code> 是服务器ip,<code>port</code> 是你的ss服务端口,<code>password</code> 是服务端密码,自行设置</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mkdir /etc/shadowsocks
+cat &lt;&lt; EOF &gt;/etc/shadowsocks/default.json
+{
+    "server": $ip,
+    "server_port": $port,
+    "local_address": "0.0.0.0",
+    "local_port": 1080,
+    "password": $password,
+    "timeout": 300,
+    "method": "chacha20-ietf-poly1305",
+    "fast_open": false,
+    "workers": 3,
+    "prefer_ipv6": false
+}
+EOF</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">shadowsocks-libev服务</div>
+<div class="content">
+<pre>cat &lt;&lt; EOF &gt; /usr/lib/systemd/system/shadowsocks-libev@.service
+[Unit]
+Description=Shadowsocks-Libev Client Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nobody
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+ExecStart=/usr/bin/ss-local -c /etc/shadowsocks/%i.json
+
+[Install]
+WantedBy=multi-user.target
+EOF</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">启动ss服务</div>
+<div class="content">
+<pre>systemctl enable shadowsocks-libev@default
+systemctl start shadowsocks-libev@default
+systemctl status shadowsocks-libev@default
+[console,bash]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="shadowsockets">19.3. shadowsockets</h3>
+<div class="paragraph">
+<p>配合 <a href="#proxychains">proxychains</a> <a href="#polipo">polipo</a> <code>OmegaOptions</code> 使用效果更佳</p>
+</div>
+<div class="sect3">
+<h4 id="_服务端安装及配置">19.3.1. 服务端安装及配置</h4>
+<div class="sect4">
+<h5 id="_开启bbr_2">开启bbr</h5>
+<div class="paragraph">
+<p>升级内核</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+yum install -y https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm
+yum --enablerepo=elrepo-kernel install -y kernel-ml
+lastest_kernel=`grep "menuentry 'CentOS Linux" /boot/grub2/grub.cfg|awk -F "'" '{print $2}'|head -n 1`
+grub2-set-default "$lastest_kernel"
+rm -f /boot/grub2/grub.cfg.bak
+cp /boot/grub2/grub.cfg /boot/grub2/grub.cfg.bak
+grub2-mkconfig -o /boot/grub2/grub.cfg
+# 重启
+reboot</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>开机后查看内核是否升级成功,显示版本&gt;=<code>4.9</code> 则成功</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>uname -r</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>加载内核模块</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># 加载内核模块
+modprobe tcp_bbr
+echo "tcp_bbr" | tee --append /etc/modules-load.d/modules.conf
+# 确认加载
+lsmod | grep bbr
+
+# 设置网络参数
+echo "net.core.default_qdisc=fq" &gt;&gt; /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" &gt;&gt; /etc/sysctl.conf
+# 生效配置
+sysctl -p
+
+# 检验参数。如果结果都有 bbr, 则证明你的内核已开启 BBR。
+sysctl net.ipv4.tcp_available_congestion_control
+sysctl net.ipv4.tcp_congestion_control</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_安装_12">安装</h5>
+<div class="listingblock">
+<div class="content">
+<pre># 更新OpenSSL证书 /etc/pki/tls/certs/ca-bundle.crt
+yum update -y openssl
+
+# 安装ss依赖
+yum install -y python-pip python python-setuptools python-devel libffi-devel openssl-devel gcc
+pip install --upgrade pip
+pip install --upgrade ordereddict backport-ipaddress setuptools urllib3
+pip install pyopenssl ndg-httpsclient pyasn
+pip install shadowsocks</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_配置_6">配置</h5>
+<div class="paragraph">
+<p>ss配置,<code>server_port</code> 为ss服务端口, 这里用的2333,<code>password</code> 为服务密码,建议设置16位随机密码<a href="#password">[password]</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &lt;&lt; EOF &gt;/etc/shadowsocks.json
+{
+    "server":"0.0.0.0",
+    "server_port":2333,
+    "password":"password",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open":false,
+    "workers":3
+}
+EOF</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>配置ss服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cat &lt;&lt;EOF &gt; /usr/lib/systemd/system/shadowsocks.service
+[Unit]
+Description=Shadowsocks Service
+After=network.target
+
+[Service]
+Type=simple
+User=nobody
+PIDFile=/tmp/shadowsocks.pid
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks.json --log-file /var/log/shadowsocks.log --pid-file /tmp/shadowsocks.pid -d start
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# 设置文件权限
+touch /var/log/shadowsocks.log
+chown nobody /var/log/shadowsocks.log</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>启动ss服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># 设置开机启动
+systemctl enable shadowsocks
+# 启动ss服务
+systemctl start shadowsocks
+# 查看ss服务状态
+systemctl status shadowsocks</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_防火墙可选">防火墙（可选）</h5>
+<div class="listingblock">
+<div class="content">
+<pre>firewall-cmd --zone=public --add-port=2333/tcp --permanent
+firewall-cmd --reload</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>这里 <code>2333</code> 是你的ss服务端口, 自行设置</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_客户端安装及配置">19.3.2. 客户端安装及配置</h4>
+<div class="sect4">
+<h5 id="_windows_2">windows</h5>
+<div class="paragraph">
+<p><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" class="bare">https://github.com/shadowsocks/shadowsocks-windows/releases</a>
+下载压缩包, 解压添加服务器帐号密码可用</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_linux_2">linux</h5>
+<div class="paragraph">
+<p>安装客户端</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pip3 install shadowsocks</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>配置客户端</p>
+</div>
+<div class="paragraph">
+<p>这里 <code>ip</code> 是服务器ip,<code>2333</code> 是你的ss服务端口,<code>password</code> 是服务端密码,自行设置</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>mkdir /etc/shadowsocks
+cat &lt;&lt; EOF &gt;/etc/shadowsocks/jp.json
+{
+    "server":"202.182.113.95",
+    "server_port":233,
+    "local_address":"0.0.0.0",
+    "local_port":1080,
+    "password":"password",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open":false,
+    "workers":3
+}
+EOF</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>客户端配置service</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>客户端ss服务命令</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># 设置开机启动
+systemctl enable shadowsocks
+# 启动ss服务
+systemctl start shadowsocks
+# 查看ss服务状态
+systemctl status shadowsocks
+[console,bash]</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_密码生成">19.3.3. 密码生成</h4>
+<div class="paragraph">
+<p>[<a id="password"></a>]</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>yum install -y pwgen
+pwgen -n 16|head -n 1</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="T">20. T</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="tomcat安装">20.1. tomcat安装</h3>
+<div class="sect3">
+<h4 id="_准备">20.1.1. 准备</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+默认在centos7下安装
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_安装jdk11如果已经是jdk11及以上请直接到install_tomcat">安装jdk11(如果已经是jdk11及以上请直接到<a href="#install tomcat">[install tomcat]</a>)</h5>
+<div class="sect5">
+<h6 id="_安装jdk11">安装jdk11</h6>
+<div class="listingblock">
+<div class="content">
+<pre>yum install java-11-openjdk.x86_64</pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_管理jdk">管理jdk</h6>
+<div class="listingblock">
+<div class="content">
+<pre>alternatives --config java</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_安装tomcat">安装tomcat</h5>
+<div class="paragraph">
+<p>[[install tomcat]]</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># 安装tomcat
+yum install tomcat
+# 安装示例app(可选)
+yum install tomcat-webapp
+# 安装后台管理(可选)
+yum install tomcat-admin-webapps</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_启动">20.1.2. 启动</h4>
+<div class="paragraph">
+<p>开机启动</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl enable tomcat</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>启动服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl start tomcat</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>重启服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl restart tomcat</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>停止服务</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>systemctl stop tomcat</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_查看_2">20.1.3. 查看</h4>
+<div class="paragraph">
+<p>服务器本机</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -I http://127.0.0.1:8080</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>其他pc或服务器</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>curl -I http://服务器ip:8080</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="U">21. U</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="V">22. V</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="W">23. W</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="X">24. X</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="Y">25. Y</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="Z">26. Z</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-08-06 14:19:27 +0800
+</div>
+</div>
+<style>
+pre.pygments .hll { background-color: #ffffcc }
+pre.pygments  { background: #f8f8f8; }
+pre.pygments .tok-c { color: #008800; font-style: italic } /* Comment */
+pre.pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+pre.pygments .tok-k { color: #AA22FF; font-weight: bold } /* Keyword */
+pre.pygments .tok-o { color: #666666 } /* Operator */
+pre.pygments .tok-ch { color: #008800; font-style: italic } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #008800; font-style: italic } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #008800 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #008800; font-style: italic } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #008800; font-style: italic } /* Comment.Single */
+pre.pygments .tok-cs { color: #008800; font-weight: bold } /* Comment.Special */
+pre.pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
+pre.pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+pre.pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
+pre.pygments .tok-go { color: #888888 } /* Generic.Output */
+pre.pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #AA22FF; font-weight: bold } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #AA22FF; font-weight: bold } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #AA22FF; font-weight: bold } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #AA22FF } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #AA22FF; font-weight: bold } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #00BB00; font-weight: bold } /* Keyword.Type */
+pre.pygments .tok-m { color: #666666 } /* Literal.Number */
+pre.pygments .tok-s { color: #BB4444 } /* Literal.String */
+pre.pygments .tok-na { color: #BB4444 } /* Name.Attribute */
+pre.pygments .tok-nb { color: #AA22FF } /* Name.Builtin */
+pre.pygments .tok-nc { color: #0000FF } /* Name.Class */
+pre.pygments .tok-no { color: #880000 } /* Name.Constant */
+pre.pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
+pre.pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
+pre.pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+pre.pygments .tok-nf { color: #00A000 } /* Name.Function */
+pre.pygments .tok-nl { color: #A0A000 } /* Name.Label */
+pre.pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+pre.pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
+pre.pygments .tok-nv { color: #B8860B } /* Name.Variable */
+pre.pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #BB4444 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #BB4444 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #BB4444 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #BB4444 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #BB4444; font-style: italic } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #BB4444 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #BB4444 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #008000 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #BB4444 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #B8860B } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #AA22FF } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #00A000 } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #B8860B } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #B8860B } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #B8860B } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #B8860B } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
+</body>
+</html>
