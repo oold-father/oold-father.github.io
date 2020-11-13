@@ -5,16 +5,23 @@ namespace :book do
     Dir.glob("book/*/images/*").each do |image|
       FileUtils.copy(image, "images/" + File.basename(image))
     end
+
+    Dir.glob("icons/*").each do |image|
+      FileUtils.copy(image, "images/" + File.basename(image))
+    end
   end
 
-  desc 'build basic book formats'
-  task :build => :prebuild do
+  desc 'build basic html book'
+  task :build_html => :prebuild do
     puts "Converting to HTML..."
-    `bundle exec asciidoctor yinxin的笔记.asc -o yinxin的笔记.html`
-    puts " -- HTML output at yinxin的笔记.html"
+    `bundle exec asciidoctor -r asciidoctor-diagram yinxin的笔记.asc -o notebook.html`
+    puts " -- HTML output at notebook.html"
+  end
 
+  desc 'build basic pdf book'
+  task :build_pdf => :prebuild do
     puts "Converting to PDF... (this one takes a while)"
-    `bundle exec asciidoctor-pdf -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=KaiGenGothicCN yinxin的笔记.asc -o yinxin的笔记.pdf`
+    `bundle exec asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=resources/CN-theme.yml -a pdf-fontsdir=resources/fonts yinxin的笔记.asc -o yinxin的笔记.pdf --trace`
     puts " -- PDF  output at yinxin的笔记.pdf"
   end
 end
