@@ -773,7 +773,15 @@ p { margin-bottom: 1.25rem; }
 </ul>
 </li>
 <li><a href="#B">2. B</a></li>
-<li><a href="#C">3. C</a></li>
+<li><a href="#C">3. C</a>
+<ul class="sectlevel2">
+<li><a href="#cargo">3.1. cargo</a>
+<ul class="sectlevel3">
+<li><a href="#_常用参数">3.1.1. 常用参数</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#D">4. D</a>
 <ul class="sectlevel2">
 <li><a href="#docker">4.1. Docker</a>
@@ -812,11 +820,12 @@ p { margin-bottom: 1.25rem; }
 </li>
 <li><a href="#J">10. J</a>
 <ul class="sectlevel2">
-<li><a href="#简历要点">10.1. 简历要点</a>
+<li><a href="#java">10.1. Java</a></li>
+<li><a href="#简历要点">10.2. 简历要点</a>
 <ul class="sectlevel3">
-<li><a href="#_工作经历">10.1.1. 工作经历</a></li>
-<li><a href="#_项目经验">10.1.2. 项目经验</a></li>
-<li><a href="#_自我评价">10.1.3. 自我评价</a></li>
+<li><a href="#_工作经历">10.2.1. 工作经历</a></li>
+<li><a href="#_项目经验">10.2.2. 项目经验</a></li>
+<li><a href="#_自我评价">10.2.3. 自我评价</a></li>
 </ul>
 </li>
 </ul>
@@ -878,7 +887,7 @@ p { margin-bottom: 1.25rem; }
 </li>
 <li><a href="#pacman">16.2. pacman</a>
 <ul class="sectlevel3">
-<li><a href="#_常用参数">16.2.1. 常用参数</a></li>
+<li><a href="#_常用参数_2">16.2.1. 常用参数</a></li>
 </ul>
 </li>
 <li><a href="#pycharm常用配置">16.3. pycharm常用配置</a>
@@ -1134,7 +1143,40 @@ asciidoctor-pdf-cjk只有beta.1版本支持转pdf不会报错，如果发现是�
 <div class="sect1">
 <h2 id="C">3. C</h2>
 <div class="sectionbody">
-
+<div class="sect2">
+<h3 id="cargo">3.1. cargo</h3>
+<div class="sect3">
+<h4 id="_常用参数">3.1.1. 常用参数</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">cargo clippy</dt>
+<dd>
+<p>类似eslint，lint工具检查代码可以优化的地方</p>
+</dd>
+<dt class="hdlist1">cargo fmt</dt>
+<dd>
+<p>类似go fmt，代码格式化</p>
+</dd>
+<dt class="hdlist1">cargo tree</dt>
+<dd>
+<p>查看第三方库的版本和依赖关系</p>
+</dd>
+<dt class="hdlist1">cargo bench</dt>
+<dd>
+<p>运行benchmark(基准测试,性能测试)</p>
+</dd>
+<dt class="hdlist1">cargo udeps(第三方)</dt>
+<dd>
+<p>检查项目中未使用的依赖</p>
+</dd>
+<dt class="hdlist1">cargo build/run --release</dt>
+<dd>
+<p>另外 cargo build/run --release 使用 release 编译会比默认的 debug 编译性能提升 10 倍以上，但是 release 缺点是编译速度较慢，而且不会显示 panic backtrace 的具体行号</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1394,12 +1436,23 @@ vim /etc/nginx/conf.d/default.conf</pre>
 <h2 id="J">10. J</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="简历要点">10.1. 简历要点</h3>
+<h3 id="java">10.1. Java</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">javap -verbose HelloWorld</dt>
+<dd>
+<p>查看class文件</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="简历要点">10.2. 简历要点</h3>
 <div class="paragraph">
 <p>简历要让HR通过简历了解你的工作经历，如同开启上帝视角</p>
 </div>
 <div class="sect3">
-<h4 id="_工作经历">10.1.1. 工作经历</h4>
+<h4 id="_工作经历">10.2.1. 工作经历</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1443,7 +1496,7 @@ vim /etc/nginx/conf.d/default.conf</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_项目经验">10.1.2. 项目经验</h4>
+<h4 id="_项目经验">10.2.2. 项目经验</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1465,7 +1518,7 @@ vim /etc/nginx/conf.d/default.conf</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_自我评价">10.1.3. 自我评价</h4>
+<h4 id="_自我评价">10.2.3. 自我评价</h4>
 <div class="paragraph">
 <p>理解应聘岗位的核心价值</p>
 </div>
@@ -1654,6 +1707,10 @@ sed -i <span class="tok-s2">&quot;s/#ClientAliveCountMax 3/ClientAliveCountMax 1
 <dd>
 <p>编译</p>
 </dd>
+<dt class="hdlist1">mvn clean compile assembly:single</dt>
+<dd>
+<p>配合assembly插件，打包完整的jar包</p>
+</dd>
 <dt class="hdlist1">mvn validate</dt>
 <dd>
 <p>验证mvn配置</p>
@@ -1681,6 +1738,14 @@ sed -i <span class="tok-s2">&quot;s/#ClientAliveCountMax 3/ClientAliveCountMax 1
 <dt class="hdlist1">mvn war:exploded</dt>
 <dd>
 <p>Create an exploded webapp in a specified directory.</p>
+</dd>
+<dt class="hdlist1">mvn package -Dmaven.test.skip=true</dt>
+<dd>
+<p>打包,不编译测试用例</p>
+</dd>
+<dt class="hdlist1">mvn package -DskipTests</dt>
+<dd>
+<p>打包,编译不执行测试用例</p>
 </dd>
 </dl>
 </div>
@@ -1792,6 +1857,12 @@ show profiles;
 show profile for query query_id;
 set global query_cache_type=on;
 show global variables like '%time%';</p>
+</dd>
+<dt class="hdlist1">临时修改全局变量</dt>
+<dd>
+<p>SHOW VARIABLES LIKE "general_log%";
+SET GLOBAL general_log = 'ON';
+SET GLOBAL general_log_file = 'd:\mysql.log';</p>
 </dd>
 </dl>
 </div>
@@ -2094,7 +2165,7 @@ EOF</pre>
 <div class="sect2">
 <h3 id="pacman">16.2. pacman</h3>
 <div class="sect3">
-<h4 id="_常用参数">16.2.1. 常用参数</h4>
+<h4 id="_常用参数_2">16.2.1. 常用参数</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Qo</dt>
