@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.15">
 <meta name="author" content="尹新&lt;yinxin666ccyy@gmail.com&gt;">
 <title>yinxin的笔记</title>
 <style>
@@ -744,6 +744,82 @@ p { margin-bottom: 1.25rem; }
 
 </style>
 <link rel="stylesheet" href="css/font-awesome.css">
+<style>
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+pre.pygments .hll { background-color: #ffffcc }
+pre.pygments { background: #f8f8f8; }
+pre.pygments .tok-c { color: #008800; font-style: italic } /* Comment */
+pre.pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+pre.pygments .tok-k { color: #AA22FF; font-weight: bold } /* Keyword */
+pre.pygments .tok-o { color: #666666 } /* Operator */
+pre.pygments .tok-ch { color: #008800; font-style: italic } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #008800; font-style: italic } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #008800 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #008800; font-style: italic } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #008800; font-style: italic } /* Comment.Single */
+pre.pygments .tok-cs { color: #008800; font-weight: bold } /* Comment.Special */
+pre.pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
+pre.pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+pre.pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
+pre.pygments .tok-go { color: #888888 } /* Generic.Output */
+pre.pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #AA22FF; font-weight: bold } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #AA22FF; font-weight: bold } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #AA22FF; font-weight: bold } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #AA22FF } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #AA22FF; font-weight: bold } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #00BB00; font-weight: bold } /* Keyword.Type */
+pre.pygments .tok-m { color: #666666 } /* Literal.Number */
+pre.pygments .tok-s { color: #BB4444 } /* Literal.String */
+pre.pygments .tok-na { color: #BB4444 } /* Name.Attribute */
+pre.pygments .tok-nb { color: #AA22FF } /* Name.Builtin */
+pre.pygments .tok-nc { color: #0000FF } /* Name.Class */
+pre.pygments .tok-no { color: #880000 } /* Name.Constant */
+pre.pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
+pre.pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
+pre.pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+pre.pygments .tok-nf { color: #00A000 } /* Name.Function */
+pre.pygments .tok-nl { color: #A0A000 } /* Name.Label */
+pre.pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+pre.pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
+pre.pygments .tok-nv { color: #B8860B } /* Name.Variable */
+pre.pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #BB4444 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #BB4444 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #BB4444 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #BB4444 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #BB4444; font-style: italic } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #BB4444 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #BB4444 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #008000 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #BB4444 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #B8860B } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #AA22FF } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #00A000 } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #B8860B } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #B8860B } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #B8860B } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #B8860B } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
@@ -831,7 +907,11 @@ p { margin-bottom: 1.25rem; }
 </li>
 </ul>
 </li>
-<li><a href="#K">11. K</a></li>
+<li><a href="#K">11. K</a>
+<ul class="sectlevel2">
+<li><a href="#开发相关问题">11.1. 开发相关问题</a></li>
+</ul>
+</li>
 <li><a href="#L">12. L</a>
 <ul class="sectlevel2">
 <li><a href="#linux常用设置">12.1. linux常用设置</a>
@@ -951,6 +1031,11 @@ p { margin-bottom: 1.25rem; }
 <li><a href="#_服务端安装及配置">19.3.1. 服务端安装及配置</a></li>
 <li><a href="#_客户端安装及配置">19.3.2. 客户端安装及配置</a></li>
 <li><a href="#_密码生成">19.3.3. 密码生成</a></li>
+</ul>
+</li>
+<li><a href="#spring-boot">19.4. spring-boot</a>
+<ul class="sectlevel3">
+<li><a href="#_打包相关问题">19.4.1. 打包相关问题</a></li>
 </ul>
 </li>
 </ul>
@@ -1578,7 +1663,33 @@ vim /etc/nginx/conf.d/default.conf</pre>
 <div class="sect1">
 <h2 id="K">11. K</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="开发相关问题">11.1. 开发相关问题</h3>
+<div class="paragraph">
+<div class="title">spring-boot + stomp实现websocket，钉钉小程序安卓无法正常交换数据</div>
+<p>stomp标准报文结构是</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>COMMAND
+BODY
 
+\000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>钉钉安卓小程序会过滤掉结尾的 <code>\000</code> 导致报文错误。</p>
+</div>
+<div class="paragraph">
+<p>解决方案:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>1.可能是钉钉的bug
+2.采用二进制传输，需要修改spring-boot服务端代码</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1661,6 +1772,15 @@ cat <span class="tok-s">&lt;&lt; EOF &gt;/etc/fstab</span>
 systemctl daemon-reload</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<div class="title">arch创建热点</div>
+<p>建立热点后需要修改`/etc/NetworkManager/NetworkManager.conf`, 否则一直是热点模式.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash"><span></span>create_ap wlp3s0 enp0s25 t430-arch mwteck.com</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1703,6 +1823,10 @@ systemctl daemon-reload</code></pre>
 <dd>
 <p>awk<br>
 示例: awk '{print $2}'</p>
+</dd>
+<dt class="hdlist1">抓包</dt>
+<dd>
+<p>tcpdump -nnn -i enp1s0 port 18080 -w out.pcap</p>
 </dd>
 </dl>
 </div>
@@ -1817,6 +1941,14 @@ dnf install mysql
 # 初始化mysql密码
 mysql
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'admin';</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>archlinux使用pacman安装mysql后需要执行数据库初始化语句，并且 <code>/var/lib/mysql</code> 需要替换为其他文件地址</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql</pre>
 </div>
 </div>
 </div>
@@ -3050,6 +3182,27 @@ pwgen -n 16|head -n 1</pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="spring-boot">19.4. spring-boot</h3>
+<div class="sect3">
+<h4 id="_打包相关问题">19.4.1. 打包相关问题</h4>
+<div class="paragraph">
+<div class="title">systemPath直接引用jar包</div>
+<p>pom文件要添加maven插件的配置，否则打包时不会把直接引用的jar包打进去</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    &lt;plugin&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+        &lt;configuration&gt;
+            &lt;includeSystemScope&gt;true&lt;/includeSystemScope&gt;
+        &lt;/configuration&gt;
+    &lt;/plugin&gt;</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -3206,76 +3359,5 @@ yum install tomcat-admin-webapps</pre>
 Last updated 2021-02-01 09:49:11 +0800
 </div>
 </div>
-<style>
-pre.pygments .hll { background-color: #ffffcc }
-pre.pygments  { background: #f8f8f8; }
-pre.pygments .tok-c { color: #008800; font-style: italic } /* Comment */
-pre.pygments .tok-err { border: 1px solid #FF0000 } /* Error */
-pre.pygments .tok-k { color: #AA22FF; font-weight: bold } /* Keyword */
-pre.pygments .tok-o { color: #666666 } /* Operator */
-pre.pygments .tok-ch { color: #008800; font-style: italic } /* Comment.Hashbang */
-pre.pygments .tok-cm { color: #008800; font-style: italic } /* Comment.Multiline */
-pre.pygments .tok-cp { color: #008800 } /* Comment.Preproc */
-pre.pygments .tok-cpf { color: #008800; font-style: italic } /* Comment.PreprocFile */
-pre.pygments .tok-c1 { color: #008800; font-style: italic } /* Comment.Single */
-pre.pygments .tok-cs { color: #008800; font-weight: bold } /* Comment.Special */
-pre.pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
-pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
-pre.pygments .tok-gr { color: #FF0000 } /* Generic.Error */
-pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
-pre.pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
-pre.pygments .tok-go { color: #888888 } /* Generic.Output */
-pre.pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
-pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-pre.pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
-pre.pygments .tok-kc { color: #AA22FF; font-weight: bold } /* Keyword.Constant */
-pre.pygments .tok-kd { color: #AA22FF; font-weight: bold } /* Keyword.Declaration */
-pre.pygments .tok-kn { color: #AA22FF; font-weight: bold } /* Keyword.Namespace */
-pre.pygments .tok-kp { color: #AA22FF } /* Keyword.Pseudo */
-pre.pygments .tok-kr { color: #AA22FF; font-weight: bold } /* Keyword.Reserved */
-pre.pygments .tok-kt { color: #00BB00; font-weight: bold } /* Keyword.Type */
-pre.pygments .tok-m { color: #666666 } /* Literal.Number */
-pre.pygments .tok-s { color: #BB4444 } /* Literal.String */
-pre.pygments .tok-na { color: #BB4444 } /* Name.Attribute */
-pre.pygments .tok-nb { color: #AA22FF } /* Name.Builtin */
-pre.pygments .tok-nc { color: #0000FF } /* Name.Class */
-pre.pygments .tok-no { color: #880000 } /* Name.Constant */
-pre.pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
-pre.pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
-pre.pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-pre.pygments .tok-nf { color: #00A000 } /* Name.Function */
-pre.pygments .tok-nl { color: #A0A000 } /* Name.Label */
-pre.pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-pre.pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
-pre.pygments .tok-nv { color: #B8860B } /* Name.Variable */
-pre.pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
-pre.pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
-pre.pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
-pre.pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
-pre.pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
-pre.pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
-pre.pygments .tok-sa { color: #BB4444 } /* Literal.String.Affix */
-pre.pygments .tok-sb { color: #BB4444 } /* Literal.String.Backtick */
-pre.pygments .tok-sc { color: #BB4444 } /* Literal.String.Char */
-pre.pygments .tok-dl { color: #BB4444 } /* Literal.String.Delimiter */
-pre.pygments .tok-sd { color: #BB4444; font-style: italic } /* Literal.String.Doc */
-pre.pygments .tok-s2 { color: #BB4444 } /* Literal.String.Double */
-pre.pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-pre.pygments .tok-sh { color: #BB4444 } /* Literal.String.Heredoc */
-pre.pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-pre.pygments .tok-sx { color: #008000 } /* Literal.String.Other */
-pre.pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
-pre.pygments .tok-s1 { color: #BB4444 } /* Literal.String.Single */
-pre.pygments .tok-ss { color: #B8860B } /* Literal.String.Symbol */
-pre.pygments .tok-bp { color: #AA22FF } /* Name.Builtin.Pseudo */
-pre.pygments .tok-fm { color: #00A000 } /* Name.Function.Magic */
-pre.pygments .tok-vc { color: #B8860B } /* Name.Variable.Class */
-pre.pygments .tok-vg { color: #B8860B } /* Name.Variable.Global */
-pre.pygments .tok-vi { color: #B8860B } /* Name.Variable.Instance */
-pre.pygments .tok-vm { color: #B8860B } /* Name.Variable.Magic */
-pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
-</style>
 </body>
 </html>
